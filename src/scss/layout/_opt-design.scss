@@ -1,0 +1,91 @@
+.design--card {
+    border-bottom: 1px solid $color--footer--border;
+}
+
+.design__title {
+    position: relative;
+    padding-left: 31px;
+    margin-bottom: 7px;
+    @media all and (min-width: 768px) {
+        margin-top: 7px;
+    }
+}
+
+.design__title::before {
+    content: "\f248";
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 400;
+    color: $color--dull-orange;
+    position: absolute;
+    left: 0;
+}
+
+.design__title::after {
+    content: "\f078";
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    color: $color--text;
+    position: absolute;
+    right: 0;
+}
+
+.design__title2::after {
+    content: "\f078";
+    transform: rotate(180deg);
+}
+
+.design__form {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+.design__form--colors {
+    margin-top: 8px;
+}
+
+.design__colors-list {
+    list-style: none;
+}
+
+.palette__option {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.palette--colors {
+    list-style: none;
+    display: flex;
+    margin-left: 5px;
+}
+
+.color__box {
+    width: 30px;
+    height: 1px;
+    padding-top: 24px;
+    overflow: hidden;
+}
+
+.photo__button-preview {
+    display: flex;
+}
+
+.photo__button {
+    width: 140px;
+    height: 30px;
+    border-radius: 3px;
+}
+
+// .photo__preview {
+//   width: 20px;
+//   height: 20px;
+//   background-color: yellow;
+//   margin-left: 5px;
+//   border: 1px solid red;
+// }
+.colors__title {
+    @include txt14 ($color--text);
+    text-transform: uppercase;
+    padding-top: 22px;
+}

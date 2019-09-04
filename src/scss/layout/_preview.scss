@@ -1,0 +1,219 @@
+.preview__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    background: linear-gradient(to bottom, $color--silver, $color--pale-grey);
+    padding-bottom: 40px;
+}
+
+.button-card__box {
+    @media all and (min-width: 768px) {
+        margin-top: 173px;
+    }
+}
+
+.reset__button {
+    align-self: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 38px 0 20px;
+    width: 75px;
+    height: 30px;
+    border-radius: 15px;
+    border: solid 1px #ffffff;
+    background-color: transparent;
+    @media all and (min-width: 768px) {
+        margin-top: 0;
+    }
+}
+
+.reset__button-title {
+    color: $color--text;
+    font-size: 12px;
+    font-family: $font-family--principal;
+    font-weight: $weight--regular;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+.fa-trash-alt {
+    width: 11px;
+    margin-right: 8px;
+}
+
+.card__box {
+    width: auto;
+    background-color: $color--white;
+    padding-top: 21px;
+    border-radius: 2px;
+    box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.35);
+}
+
+.name-job__box {
+    border-left: solid 5px $color--dirty-blue;
+    margin: 0px 0 10px;
+}
+
+.name__card {
+    color: $color--dark-green-blue;
+    font-size: 18px;
+    width: 220px;
+    height: auto;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    font-family: $font-family--card;
+    font-weight: $weight--bold;
+    line-height: 20px;
+    margin: 0px 0px 4px 15px;
+}
+
+.job__card {
+    color: $color--text;
+    font-size: 16px;
+    width: 220px;
+    height: auto;
+    overflow-x: hidden;
+    word-wrap: break-word;
+    font-family: $font-family--card;
+    font-weight: $weight--regular;
+    line-height: 20px;
+    margin-left: 15px;
+}
+
+.rrss__list {
+    display: flex;
+    list-style: none;
+    padding: 10px 0px 12px 20px;
+}
+
+.name__card {
+    font-family: $font-family--card;
+    color: $color--dark-green-blue;
+    font-weight: $weight--bold;
+    line-height: 1.1;
+}
+
+.job__card {
+    font-size: 16px;
+    font-family: $font-family--card;
+    line-height: 1.25;
+    color: $color--text;
+}
+
+.image-card, .foto__preview {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.foto__preview {
+  width: 30px;
+  height: 30px;
+}
+.image-card {
+  width: 240px;
+  height: 200px;
+}
+.link__icon__card {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: solid 2px $color--hospital-green;
+    color: $color--dark-green-blue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.phone-icon {
+    font-size: 18px;
+}
+
+.card-icon {
+    font-size: 18px;
+}
+
+.linkedin-icon {
+    font-size: 18px;
+}
+
+.github-icon {
+    font-size: 18px;
+}
+//Definir colores para js de paleta
+.palette1 {
+  .name__card {
+    color: $color--dark-green-blue;
+  }
+  .name-job__box {
+    border-left: solid 5px $color--dirty-blue;
+    margin: 0px 0 10px;
+  }
+  .link__icon__card {
+    border: solid 2px $color--hospital-green;
+    color: $color--dark-green-blue;
+  }
+}
+
+.palette2 {
+  .name__card {
+    color: $color--dried-blood;
+  }
+  .name-job__box {
+    border-left: solid 5px $color--rusty-red;
+    margin: 0px 0 10px;
+  }
+  .link__icon__card {
+    border: solid 2px $color--tomato;
+    color: $color--dried-blood;
+  }
+}
+
+.palette3 {
+  .name__card {
+    color: $color--slate;
+  }
+  .name-job__box {
+    border-left: solid 5px $color--faded-orange;
+    margin: 0px 0 10px;
+  }
+  .link__icon__card {
+    border: solid 2px $color--light-grey-blue;
+    color: $color--slate;
+  }
+}
+
+.palette4 {
+  .name__card {
+    color: $color--purple;
+  }
+  .name-job__box {
+    border-left: solid 5px $color--medium-orchid;
+    margin: 0px 0 10px;
+  }
+  .link__icon__card {
+    border: solid 2px $color--light-purple;
+    color: $color--purple;
+  }
+}
+
+.palette5 {
+  .name__card {
+    color: $color--super-dark-green;
+  }
+  .name-job__box {
+    border-left: solid 5px $color--green;
+    margin: 0px 0 10px;
+  }
+  .link__icon__card {
+    border: solid 2px $color--lawnish-green;
+    color: $color--super-dark-green;
+  }
+}
+.supersecret {
+  display: none;
+}

@@ -1,0 +1,36 @@
+.options__box {
+    background-color: #f5f5f5;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 20px;
+    margin: 27px 0 30px;
+    @media all and (min-width:768px){
+      margin: 0;
+    }
+}
+
+.design--card,
+.fill--card,
+.share--card {
+    border: none;
+}
+
+.design__title,
+.fill__title,
+.share__title {
+    @include txt18($color--text);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.options__box,
+.fill__form,
+.share__box{
+     ::first-letter {
+        text-transform: capitalize;
+    }
+}
+
+.drop-down {
+    display: none;
+}

@@ -1,0 +1,130 @@
+.landing-page-container{
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-height: 100vh;
+}
+.landing-page-headermain{
+  grid-row: 1/2;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+  position:relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  @media all and (min-width: 768px) {
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+}
+.page__main {
+    background-color: #f5f5f5;
+    //position: relative;
+    //min-height: 300px;
+    //@media all and (min-width: 768px) {
+        //min-height: 400px;
+    //}
+    margin-top: 35.4px;
+    text-align: center;
+    @media all and (min-width: 768px) {
+      margin-top: 31px;
+  }
+}
+
+//Sin botón
+.main__container {
+    //display: flex;
+    //flex-flow: column;
+    //justify-content: center;
+    //align-items: center;
+    //padding-top: 35.4px;
+}
+
+.main__title {
+    color: $color--dull-orange;
+    font-family: $font-family--title;
+    font-weight: $weight--black;
+    font-size: 19.2px;
+    @media all and (min-width: 768px) {
+        font-size: 24px;
+    }
+}
+
+.main__subtitle {
+    width: 264.8px;
+    @include txt128($color--dark-green-blue);
+    //text-align: center;
+    //margin: 0 28px 17.8px;
+    margin-bottom: 17.8px;
+    @media all and (min-width: 768px) {
+      margin-bottom: 27px;
+      width: 331px;
+  }
+}
+
+.box {
+    width: 268px;
+    height: 73.8px;
+    @media all and (min-width: 768px) {
+      width: 325px;
+      height: 86px;
+  }
+}
+
+.box__list {
+    list-style: none;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    padding: 15px 20px 10px 20px;
+    border: solid 1.6px rgba(225, 115, 52, 0.21);
+    border-radius: 4px;
+}
+
+.list__icon {
+    text-align: center;
+}
+
+.icon {
+    fill: $color--dull-orange;
+    width: 32px;
+    height: 26px;
+}
+
+.icon__label {
+    text-transform: capitalize;
+    @include txt128($color--text);
+}
+
+.button__container {
+    margin: auto;
+    width: 129px;
+    height: 42px;
+    border-radius: 21px;
+    background-color: $color--dark-green-blue;
+    //position: absolute;
+    //bottom: 30px;
+    //left: 50%;
+    //transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media all and (min-width: 768px) {
+        bottom: 60px;
+        // transform: translateX(-50%);
+    }
+}
+
+.landing__button {
+    font-family: $font-family--principal;
+    font-size: 16px;
+    font-weight: $weight--semi-bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $color--white;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}

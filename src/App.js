@@ -1,6 +1,10 @@
 import React from 'react';
 import './scss/main.scss';
 import iconDesign from './images/object-ungroup-regular.svg';
+import iconFill from './images/keyboard-regular.svg';
+import iconShare from './images/share-alt-solid.svg';
+import logoTeselas from './images/logo-teselas-nomargin.png';
+import logoAda from './images/logo-adalab.png';
 
 function App() {
   return (
@@ -22,11 +26,11 @@ function App() {
                   <p className="icon__label">diseña</p>
                 </li>
                 <li className="list__icon">
-                  <img className="icon" src="assets/images/keyboard-regular.svg" alt="icono-rellena" />
+                  <img className="icon" src={iconFill} alt="icono-rellena" />
                   <p className="icon__label">rellena</p>
                 </li>
                 <li className="list__icon">
-                  <img className="icon" src="assets/images/share-alt-solid.svg" alt="icono-comparte" />
+                  <img className="icon" src={iconShare}  alt="icono-comparte" />
                   <p className="icon__label">comparte</p>
                 </li>
               </ul>
@@ -40,9 +44,9 @@ function App() {
         <div className="footer-container">
           <p className="copyright">Awesome profile-cards @2018</p>
           <div className="teselas-logo-container">
-            <img src="assets/images/logo-teselas-nomargin.png" alt="Teselas Logo"
+            <img src={logoTeselas} alt="Teselas Logo"
               className="logo-teselas" />
-          </div> <a href="https://adalab.es/" className="logo-adalab-link" target="_blank"><img src="assets/images/logo-adalab.png" alt="logo de adalab" className="image-adalab" /></a>
+          </div> <a href="https://adalab.es/" className="logo-adalab-link" target="_blank"><img src={logoAda} alt="logo de adalab" className="image-adalab" /></a>
         </div>
       </footer>
     </div>

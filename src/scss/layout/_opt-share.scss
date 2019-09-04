@@ -1,0 +1,117 @@
+.share__title {
+    position: relative;
+    padding-left: 31px;
+    margin-top: 10px;
+    margin-bottom: 7px;
+}
+
+.share__title::before {
+    content: "\f1e0";
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 600;
+    color: $color--dull-orange;
+    position: absolute;
+    left: 0;
+    width: 20.25px;
+}
+
+.share__title::after {
+    content: "\f078";
+    font-family: "Font Awesome 5 Pro";
+    font-weight: 900;
+    color: $color--text;
+    position: absolute;
+    right: 0;
+}
+
+.share__title2::after {
+    content: "\f078";
+    transform: rotate(180deg);
+}
+
+.share--card {
+    border-bottom: 1px solid $color--footer--border;
+}
+
+.icon__form {
+    fill: $color--dull-orange;
+    width: 32px;
+    height: 26px;
+}
+
+.create__button {
+    @include txt18($color--white);
+    text-transform: uppercase;
+    height: 50px;
+    width: 200px;
+    border-radius: 12px;
+    background: $color--dull-orange;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+    margin-top: 30px;
+}
+
+.create__button--icon {
+    width: 25px;
+    height: 22px;
+    margin-right: 9px;
+}
+
+.link__card {
+    color: $color--dull-orange;
+    font-size: 12px;
+    font-family: $font-family--principal;
+    font-weight: $weight--semi-bold;
+    text-decoration: none;
+}
+
+.create__button-container {
+    padding-bottom: 30px;
+    margin-bottom:0;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.grey__create__button {
+  background-color: #d5d5d5;
+}
+.card__created--info {
+    border-top: 1px solid $color--footer--border;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.container__button-twitter {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.share__button-twitter {
+    width: 181px;
+    background-color: $color--twitter;
+    height: 30px;
+    border-radius: 3px;
+    text-decoration: none;
+    @include txt14($color--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    align-self: center;
+}
+.created--message {
+  @include txt18($color--text);
+  padding-top: 20px;
+  margin-bottom: 5px;
+}
+
+.twitter__icon {
+    width: 18px;
+    height: 18px;
+}
+
