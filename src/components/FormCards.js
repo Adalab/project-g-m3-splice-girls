@@ -9,8 +9,11 @@ class FormCards extends React.Component {
         return (
             <React.Fragment>
                 <FormHeader/>
+
                 <FormMain/>
+
                 <FormFooter/>
+                
             </React.Fragment>
         );
     }
