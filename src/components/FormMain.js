@@ -10,7 +10,7 @@ class FormMain extends React.Component {
                 <div className="wrapper__box">
 
                     <FormOption handleChangeName={this.props.handleChangeName}/>
-                    <FormPreview />
+                    <FormPreview cardName = {this.props.cardName}/>
 
                 </div>
 

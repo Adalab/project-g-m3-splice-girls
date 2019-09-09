@@ -8,7 +8,7 @@ class FormPreview extends React.Component {
                     <button className="reset__button" type="reset"><img src="assets/images/trash-alt-regular.svg" className="far fa-trash-alt" alt="" /><span className="reset__button-title">Reset</span></button>
                     <div className="card__box">
                         <div className="name-job__box">
-                            <p className="name__card">Nombre Apellido</p>
+                            <p className="name__card">{this.props.cardName === ''? 'Nombre y apellido': this.props.cardName}</p>
                             <p className="job__card">front-end developer</p>
                         </div>
                         <div className="image-card js__profile-image"></div>

@@ -19,13 +19,14 @@ class App extends React.Component {
        console.log (value);
        this.setState({
            name: value
+       }, ()=> {
+        console.log (this.state);
        });
-       console.log (this.state);
     }
     
     render() {
         return (
-            <FormCards handleChangeName={this.handleChangeName}/>
+            <FormCards cardName = {this.state.name} handleChangeName={this.handleChangeName}/>
         )
 
     }
