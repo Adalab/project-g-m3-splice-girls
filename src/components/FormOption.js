@@ -8,9 +8,9 @@ class FormOption extends React.Component {
         const titulo = 'Diseña';
         return (
             <div className="options__box">
-                <form class="create__card" action="https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/" method="POST">
+                <form className="create__card" action="https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/" method="POST">
                     <FormOptDesign title={titulo} />
-                    <FormOptFill />
+                    <FormOptFill handleChangeName={this.props.handleChangeName}/>
                     <FormOptShare />
                 </form>
 

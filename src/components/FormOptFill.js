@@ -9,7 +9,7 @@ class FormOptFill extends React.Component {
                 <div className="fill__form drop-down">
                     <div className="fill__box--name">
                         <label className="fill_name" htmlFor="name">nombre completo</label>
-                        <input className="field__fill field__fill-name" type="text" name="name" placeholder="Ej: Sally Jill" id="firstName" value="" required />
+                        <input className="field__fill field__fill-name" type="text" name="name" placeholder="Ej: Sally Jill" id="firstName" onChange={this.props.handleChangeName} required/>
                     </div>
 
                     <div className="fill__box--job">

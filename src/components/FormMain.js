@@ -9,7 +9,7 @@ class FormMain extends React.Component {
             <main className="main__box">
                 <div className="wrapper__box">
 
-                    <FormOption />
+                    <FormOption handleChangeName={this.props.handleChangeName}/>
                     <FormPreview />
 
                 </div>

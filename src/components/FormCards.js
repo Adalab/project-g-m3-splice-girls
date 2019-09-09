@@ -10,7 +10,7 @@ class FormCards extends React.Component {
             <React.Fragment>
                 <FormHeader/>
 
-                <FormMain/>
+                <FormMain handleChangeName={this.props.handleChangeName}/>
 
                 <FormFooter/>
                 
