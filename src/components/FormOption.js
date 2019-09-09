@@ -11,7 +11,7 @@ class FormOption extends React.Component {
             <div className="options__box">
                 <form className="create__card" action="https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/" method="POST">
                     <FormOptDesign title={titulo} />
-                    <FormOptFill handleChangeName={this.props.handleChangeName}/>
+                    <FormOptFill handleChangeState={this.props.handleChangeState}/>
                     <FormOptShare />
                 </form>
 
@@ -24,7 +24,7 @@ class FormOption extends React.Component {
 }
 
 FormOption.propTypes= {
-    handleChangeName: PropTypes.func,  
+    handleChangeState: PropTypes.func,  
   }
 
 export default FormOption;

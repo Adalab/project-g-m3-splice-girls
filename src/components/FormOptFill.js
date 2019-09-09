@@ -10,12 +10,12 @@ class FormOptFill extends React.Component {
                 <div className="fill__form drop-down">
                     <div className="fill__box--name">
                         <label className="fill_name" htmlFor="name">nombre completo</label>
-                        <input className="field__fill field__fill-name" type="text" name="name" placeholder="Ej: Sally Jill" id="firstName" onChange={this.props.handleChangeName} required/>
+                        <input className="field__fill field__fill-name" type="text" name="name" placeholder="Ej: Sally Jill" id="firstName" onChange={this.props.handleChangeState} required/>
                     </div>
 
                     <div className="fill__box--job">
                         <label className="fill_job" htmlFor="job">puesto</label>
-                        <input className="field__fill field__fill-job" type="text" name="job" placeholder="Ej: Front-end unicorn" id="job_position" required />
+                        <input className="field__fill field__fill-job" type="text" name="job" placeholder="Ej: Front-end unicorn" id="job_position" onChange={this.props.handleChangeState} required />
                     </div>
 
                     <div className="fill__box--photo">
@@ -28,20 +28,20 @@ class FormOptFill extends React.Component {
                     </div>
 
                     <div className="fill__box--email">
-                        <label className="fill_email" htmlFor="email">email</label>
-                        <input className="field__fill field__fill-icon input--email" type="email" name="email" placeholder="Ej: sally-hill@gmail.com" id="email_account" required />
+                        <label className="fill_email" htmlFor="email" >email</label>
+                        <input className="field__fill field__fill-icon input--email" type="email" name="email" placeholder="Ej: sally-hill@gmail.com" id="email_account" onChange={this.props.handleChangeState} required />
                     </div>
                     <div className="fill__box--phone">
                         <label className="fill_phone" htmlFor="telephone">teléfono</label>
-                        <input className="field__fill field__fill-icon input--phone" type="tel" name="telephone" placeholder="Ej: 555-55-55-55" id="telephone" />
+                        <input className="field__fill field__fill-icon input--phone" type="tel" name="telephone" placeholder="Ej: 555-55-55-55" id="telephone" onChange={this.props.handleChangeState} />
                     </div>
                     <div className="fill__box--linkedin">
                         <label className="fill_linkedin" htmlFor="linkedin">linkedin</label>
-                        <input className="field__fill field__fill-icon input--linkedin" type="text" name="linkedin" placeholder="Ej: sally-hill" id="linkedin" required />
+                        <input className="field__fill field__fill-icon input--linkedin" type="text" name="linkedin" placeholder="Ej: sally-hill" id="linkedin" onChange={this.props.handleChangeState} required />
                     </div>
                     <div className="fill__box--github">
                         <label className="fill_github" htmlFor="github">github</label>
-                        <input className="field__fill field__fill-icon input--github" type="text" name="github" placeholder="Ej: sally-hill" id="github" required />
+                        <input className="field__fill field__fill-icon input--github" type="text" name="github" placeholder="Ej: sally-hill" id="github" onChange={this.props.handleChangeState} required />
                     </div>
                 </div>
             </fieldset>
@@ -50,6 +50,6 @@ class FormOptFill extends React.Component {
     }
 }
 FormOptFill.propTypes= {
-    handleChangeName: PropTypes.func,  
+    handleChangeState: PropTypes.func,  
   }
 export default FormOptFill;

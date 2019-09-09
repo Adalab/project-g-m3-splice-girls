@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class FormPreview extends React.Component {
     render() {
@@ -8,22 +9,27 @@ class FormPreview extends React.Component {
                     <button className="reset__button" type="reset"><img src="assets/images/trash-alt-regular.svg" className="far fa-trash-alt" alt="" /><span className="reset__button-title">Reset</span></button>
                     <div className="card__box">
                         <div className="name-job__box">
-                            <p className="name__card">{this.props.cardName === ''? 'Nombre y apellido': this.props.cardName}</p>
-                            <p className="job__card">front-end developer</p>
+                            <p className="name__card">
+                                {this.props.cardName === ''? 'Nombre Apellido': this.props.cardName}
+                            </p>
+                            <p className="job__card">
+                                {this.props.cardJob === ''? 'front-end developer': this.props.cardJob}
+                            </p>
                         </div>
                         <div className="image-card js__profile-image"></div>
                         <ul className="rrss__list">
-                            <li className="li--card item2 supersecret">
-                                <a href="#" className="link__icon__card link__icon__card-mail"> <i className="far fa-envelope card-icon"></i></a>
+                            <li className={this.props.cardEmail === '' ? 'li--card item2 supersecret':'li--card item2'}>
+                                <a href={this.props.cardEmail === '' ? '#':'mailto:' + this.props.cardEmail} 
+                                className="link__icon__card link__icon__card-mail"> <i className="far fa-envelope card-icon"></i></a>
                             </li>
                             <li className="li--card item1 supersecret">
-                                <a href="#" className="link__icon__card link__icon__card-phone"> <i className="fas fa-mobile-alt phone-icon"></i> </a>
+                                <a href={this.props.cardTelephone === '' ? '#':'tel:' + this.props.cardTelephone} className="link__icon__card link__icon__card-phone"> <i className="fas fa-mobile-alt phone-icon"></i> </a>
                             </li>
                             <li className="li--card item3 supersecret">
-                                <a href="#" className="link__icon__card link__icon__card-linkedin" target="blank"> <i className="fab fa-linkedin-in linkedin-icon"></i> </a>
+                                <a href={this.props.cardLinkedin === '' ? '#':'https://www.linkedin.com/in/' + this.props.cardLinkedin}  className="link__icon__card link__icon__card-linkedin" target="blank"> <i className="fab fa-linkedin-in linkedin-icon"></i> </a>
                             </li>
                             <li className="li--card item4 supersecret">
-                                <a href="#" className="link__icon__card link__icon__card-github" target="blank"> <i className="fab fa-github-alt github-icon"></i></a>
+                                <a href={this.props.cardGithub === '' ? '#':'https://www.github.com/' + this.props.cardGithub} className="link__icon__card link__icon__card-github" target="blank"> <i className="fab fa-github-alt github-icon"></i></a>
                             </li>
                         </ul>
                     </div>
@@ -32,5 +38,16 @@ class FormPreview extends React.Component {
         );
     }
 }
+
+
+FormPreview.propTypes= {
+    handleChangeState: PropTypes.func,  
+    cardName: PropTypes.string,
+    cardJob: PropTypes.string,
+    cardEmail: PropTypes.string,
+    cardTelephone: PropTypes.string,
+    cardLinkedin: PropTypes.string,
+    cardGithub: PropTypes.string,
+  }
 
 export default FormPreview;

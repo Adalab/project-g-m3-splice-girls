@@ -10,8 +10,15 @@ class FormMain extends React.Component {
             <main className="main__box">
                 <div className="wrapper__box">
 
-                    <FormOption handleChangeName={this.props.handleChangeName}/>
-                    <FormPreview cardName = {this.props.cardName}/>
+                    <FormOption handleChangeState={this.props.handleChangeState}/>
+                    <FormPreview 
+                    cardName = {this.props.cardName} 
+                    cardJob={this.props.cardJob} 
+                    cardEmail={this.props.cardEmail}
+                    cardTelephone={this.props.cardTelephone}
+                    cardLinkedin={this.props.cardLinkedin}
+                    cardGithub={this.props.cardGithub}
+                    />
 
                 </div>
 
@@ -24,8 +31,13 @@ class FormMain extends React.Component {
 }
 
 FormMain.propTypes= {
-  handleChangeName: PropTypes.func,  
+  handleChangeState: PropTypes.func,  
   cardName: PropTypes.string,
+  cardJob: PropTypes.string,
+  cardEmail: PropTypes.string,
+  cardTelephone: PropTypes.string,
+  cardLinkedin: PropTypes.string,
+  cardGithub: PropTypes.string,
 }
 
 export default FormMain;

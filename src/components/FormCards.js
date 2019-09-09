@@ -6,22 +6,33 @@ import FormFooter from './FormFooter';
 
 
 class FormCards extends React.Component {
-    render () {
+    render() {
         return (
             <React.Fragment>
-                <FormHeader/>
+                <FormHeader />
 
-                <FormMain  cardName = {this.props.cardName} handleChangeName={this.props.handleChangeName}/>
+                <FormMain cardName={this.props.cardName}
+                    cardJob={this.props.cardJob}
+                    cardEmail={this.props.cardEmail}
+                    cardTelephone={this.props.cardTelephone}
+                    cardLinkedin={this.props.cardLinkedin}
+                    cardGithub={this.props.cardGithub}
+                    handleChangeState={this.props.handleChangeState} />
 
-                <FormFooter/>
-                
+                <FormFooter />
+
             </React.Fragment>
         );
     }
-} 
+}
 
 FormCards.propTypes = {
     cardName: PropTypes.string,
-    handleChangeName: PropTypes.func,
+    cardJob: PropTypes.string,
+    cardEmail: PropTypes.string,
+    cardTelephone: PropTypes.string,
+    cardLinkedin: PropTypes.string,
+    cardGithub: PropTypes.string,
+    handleChangeState: PropTypes.func,
 }
 export default FormCards;
