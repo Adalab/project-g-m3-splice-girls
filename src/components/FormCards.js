@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import FormHeader from './FormHeader';
 import FormMain from './FormMain';
 import FormFooter from './FormFooter';
@@ -19,5 +20,8 @@ class FormCards extends React.Component {
     }
 } 
 
-
+FormCards.propTypes = {
+    cardName: PropTypes.string,
+    handleChangeName: PropTypes.func,
+}
 export default FormCards;

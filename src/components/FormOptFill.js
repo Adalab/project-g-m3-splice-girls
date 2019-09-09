@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class FormOptFill extends React.Component {
     render() {
@@ -48,5 +49,7 @@ class FormOptFill extends React.Component {
         );
     }
 }
-
+FormOptFill.propTypes= {
+    handleChangeName: PropTypes.func,  
+  }
 export default FormOptFill;

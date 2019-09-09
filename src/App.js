@@ -1,4 +1,5 @@
 import React from 'react';
+// import PropTypes from 'prop-types';
 //import Landing from './Landing';
 import FormCards from './components/FormCards';
 
@@ -31,4 +32,7 @@ class App extends React.Component {
 
     }
 }
+
+
+
 export default App

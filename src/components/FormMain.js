@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import FormOption from './FormOption';
 import FormPreview from './FormPreview';
 
@@ -20,6 +21,11 @@ class FormMain extends React.Component {
 
         );
     }
+}
+
+FormMain.propTypes= {
+  handleChangeName: PropTypes.func,  
+  cardName: PropTypes.string,
 }
 
 export default FormMain;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import FormOptDesign from './FormOptDesign';
 import FormOptFill from './FormOptFill';
 import FormOptShare from './FormOptShare';
@@ -22,5 +23,8 @@ class FormOption extends React.Component {
     }
 }
 
+FormOption.propTypes= {
+    handleChangeName: PropTypes.func,  
+  }
 
 export default FormOption;
