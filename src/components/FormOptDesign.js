@@ -35,7 +35,7 @@ class FormOptDesing extends React.Component {
                                 <li className="palette">
                                     <label htmlFor="p1" className="palette__option">
                                         <input className="radio__palette radio__palette1" type="radio" name="palette" value="palette1" id="p1"
-                                            checked />
+                                             />
                                         <ul className="palette--colors">
                                             <li className="color__box p1--color1" style={{  backgroundColor: '#114e4e' }}>cyprus</li>
                                             <li className="color__box p1--color2" style={{ backgroundColor: '#438792'}}>hippie blue</li>
