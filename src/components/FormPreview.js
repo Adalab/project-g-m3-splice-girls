@@ -1,4 +1,7 @@
 import React from 'react';
+import DefaultUrlImage from './DefaultUrlImage';
+
+
 
 class FormPreview extends React.Component {
     render() {
@@ -11,7 +14,7 @@ class FormPreview extends React.Component {
                             <p className="name__card">Nombre Apellido</p>
                             <p className="job__card">front-end developer</p>
                         </div>
-                        <div className="image-card js__profile-image"></div>
+                        <div className="image-card js__profile-image" style={{backgroundImage:`url(${DefaultUrlImage})`}}></div>
                         <ul className="rrss__list">
                             <li className="li--card item2 supersecret">
                                 <a href="#" className="link__icon__card link__icon__card-mail"> <i className="far fa-envelope card-icon"></i></a>
