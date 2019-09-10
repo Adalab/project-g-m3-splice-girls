@@ -10,7 +10,7 @@ class FormMain extends React.Component {
             <main className="main__box">
                 <div className="wrapper__box">
 
-                    <FormOption handleChangeState={this.props.handleChangeState} />
+                    <FormOption handleChangeState={this.props.handleChangeState}  cardPalette={this.props.cardPalette}  />
                     <FormPreview
                         cardPalette={this.props.cardPalette}
                         cardName={this.props.cardName}
@@ -19,6 +19,7 @@ class FormMain extends React.Component {
                         cardTelephone={this.props.cardTelephone}
                         cardLinkedin={this.props.cardLinkedin}
                         cardGithub={this.props.cardGithub}
+
                     />
 
                 </div>

@@ -23,13 +23,13 @@ class App extends React.Component {
 
     handleChangeState(event) {
         const atributo = event.currentTarget.name;
-        console.log(atributo);
+       
         const value = event.currentTarget.value;
-        console.log(value);
+        
         this.setState({
             [atributo]: value
         }, () => {
-            console.log(this.state);
+            
         });
     }
 
