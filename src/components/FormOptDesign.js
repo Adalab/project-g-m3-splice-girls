@@ -15,8 +15,7 @@ class FormOptDesing extends React.Component {
                             <ul className="design__colors-list">
                                 <li className="palette">
                                     <label htmlFor="p1" className="palette__option">
-                                        <input className="radio__palette radio__palette1" type="radio" name="palette" value="palette1" id="p1" onClick={this.props.handleChangeState}
-                                             />
+                                        <input className="radio__palette radio__palette1" type="radio" name="palette" value="palette1" id="p1" onClick={this.props.handleChangeState}  />
                                         <ul className="palette--colors">
                                             <li className="color__box p1--color1" style={{  backgroundColor: '#114e4e' }}>cyprus</li>
                                             <li className="color__box p1--color2" style={{ backgroundColor: '#438792'}}>hippie blue</li>
@@ -56,7 +55,7 @@ class FormOptDesing extends React.Component {
                                 </li>
                                 <li className="palette">
                                     <label htmlFor="p5" className="palette__option">
-                                        <input className="radio__palette radio__palette5" type="radio" name="palette" value="palette5" id="p5" onClick={this.props.handleChangeState} />
+                                        <input className="radio__palette radio__palette5" type="radio" name="palette" value="palette5" id="p5" onClick={this.props.handleChangeState}/>
                                         <ul className="palette--colors">
                                             <li className="color__box p5--color1" style={{ backgroundColor: '#005500' }}>super dark green</li>
                                             <li className="color__box" style={{ backgroundColor: '#008000' }}>green</li>

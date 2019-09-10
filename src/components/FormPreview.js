@@ -26,10 +26,10 @@ class FormPreview extends React.Component {
                             <li className={this.props.cardTelephone === '' ? 'li--card item1 supersecret':'li--card item1'}>
                                 <a href={this.props.cardTelephone === '' ? '#':'tel:' + this.props.cardTelephone} className="link__icon__card link__icon__card-phone"> <i className="fas fa-mobile-alt phone-icon"></i> </a>
                             </li>
-                            <li className="li--card item3 supersecret">
+                            <li className={this.props.cardLinkedin === '' ? 'li--card item3 supersecret':'li--card item3'}>
                                 <a href={this.props.cardLinkedin === '' ? '#':'https://www.linkedin.com/in/' + this.props.cardLinkedin}  className="link__icon__card link__icon__card-linkedin" target="blank"> <i className="fab fa-linkedin-in linkedin-icon"></i> </a>
                             </li>
-                            <li className="li--card item4 supersecret">
+                            <li className={this.props.cardGithub === '' ? 'li--card item4 supersecret':'li--card item4'}>
                                 <a href={this.props.cardGithub === '' ? '#':'https://www.github.com/' + this.props.cardGithub} className="link__icon__card link__icon__card-github" target="blank"> <i className="fab fa-github-alt github-icon"></i></a>
                             </li>
                         </ul>

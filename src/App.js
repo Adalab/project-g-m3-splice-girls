@@ -9,7 +9,7 @@ class App extends React.Component {
         super(props)
 
         this.state = {
-            palette: '',
+            palette: 'palette1',
             name: '',
             job: '',
             email:'',
