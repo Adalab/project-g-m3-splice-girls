@@ -15,8 +15,7 @@ class FormOptDesing extends React.Component {
                             <ul className="design__colors-list">
                                 <li className="palette">
                                     <label htmlFor="p1" className="palette__option">
-                                        <input className="radio__palette radio__palette1" type="radio" name="palette" value="palette1" id="p1"
-                                             />
+                                        <input className="radio__palette radio__palette1" type="radio" name="palette" value="palette1" id="p1" onClick={this.props.handleChangeState}  />
                                         <ul className="palette--colors">
                                             <li className="color__box p1--color1" style={{  backgroundColor: '#114e4e' }}>cyprus</li>
                                             <li className="color__box p1--color2" style={{ backgroundColor: '#438792'}}>hippie blue</li>
@@ -26,7 +25,7 @@ class FormOptDesing extends React.Component {
                                 </li>
                                 <li className="palette">
                                     <label htmlFor="p2" className="palette__option">
-                                        <input className="radio__palette radio__palette2" type="radio" name="palette" value="palette2" id="p2" />
+                                        <input className="radio__palette radio__palette2" type="radio" name="palette" value="palette2" id="p2" onClick={this.props.handleChangeState} />
                                         <ul className="palette--colors">
                                             <li className="color__box p2--color1" style={{ backgroundColor: '#420101' }}>seal brown</li>
                                             <li className="color__box" style={{ backgroundColor: '#bd1010' }}>free speech red</li>
@@ -36,7 +35,7 @@ class FormOptDesing extends React.Component {
                                 </li>
                                 <li className="palette">
                                     <label htmlFor="p3" className="palette__option">
-                                        <input className="radio__palette radio__palette3" type="radio" name="palette" value="palette3" id="p3" />
+                                        <input className="radio__palette radio__palette3" type="radio" name="palette" value="palette3" id="p3" onClick={this.props.handleChangeState} />
                                         <ul className="palette--colors">
                                             <li className="color__box p3--color1" style={{ backgroundColor: '#3e5b65'}}>san juan</li>
                                             <li className="color__box p3--color2" style={{ backgroundColor: '#eab052'  }}>casablanca</li>
@@ -46,7 +45,7 @@ class FormOptDesing extends React.Component {
                                 </li>
                                 <li className="palette">
                                     <label htmlFor="p4" className="palette__option">
-                                        <input className="radio__palette radio__palette4" type="radio" name="palette" value="palette4" id="p4" />
+                                        <input className="radio__palette radio__palette4" type="radio" name="palette" value="palette4" id="p4" onClick={this.props.handleChangeState} />
                                         <ul className="palette--colors">
                                             <li className="color__box p4--color1" style={{ backgroundColor: '#600060' }}>purple</li>
                                             <li className="color__box" style={{ backgroundColor: '#aa00aa' }}>medium orchid</li>
@@ -56,7 +55,7 @@ class FormOptDesing extends React.Component {
                                 </li>
                                 <li className="palette">
                                     <label htmlFor="p5" className="palette__option">
-                                        <input className="radio__palette radio__palette5" type="radio" name="palette" value="palette5" id="p5" />
+                                        <input className="radio__palette radio__palette5" type="radio" name="palette" value="palette5" id="p5" onClick={this.props.handleChangeState}/>
                                         <ul className="palette--colors">
                                             <li className="color__box p5--color1" style={{ backgroundColor: '#005500' }}>super dark green</li>
                                             <li className="color__box" style={{ backgroundColor: '#008000' }}>green</li>

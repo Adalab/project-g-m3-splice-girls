@@ -9,6 +9,7 @@ class App extends React.Component {
         super(props)
 
         this.state = {
+            palette: 'palette1',
             name: '',
             job: '',
             email:'',
@@ -35,6 +36,7 @@ class App extends React.Component {
     render() {
         return (
             <FormCards 
+            cardPalette={this.state.palette}
             cardName={this.state.name} 
             cardJob={this.state.job}
             cardEmail={this.state.email}

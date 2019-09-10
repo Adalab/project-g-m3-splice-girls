@@ -10,14 +10,15 @@ class FormMain extends React.Component {
             <main className="main__box">
                 <div className="wrapper__box">
 
-                    <FormOption handleChangeState={this.props.handleChangeState}/>
-                    <FormPreview 
-                    cardName = {this.props.cardName} 
-                    cardJob={this.props.cardJob} 
-                    cardEmail={this.props.cardEmail}
-                    cardTelephone={this.props.cardTelephone}
-                    cardLinkedin={this.props.cardLinkedin}
-                    cardGithub={this.props.cardGithub}
+                    <FormOption handleChangeState={this.props.handleChangeState} />
+                    <FormPreview
+                        cardPalette={this.props.cardPalette}
+                        cardName={this.props.cardName}
+                        cardJob={this.props.cardJob}
+                        cardEmail={this.props.cardEmail}
+                        cardTelephone={this.props.cardTelephone}
+                        cardLinkedin={this.props.cardLinkedin}
+                        cardGithub={this.props.cardGithub}
                     />
 
                 </div>
@@ -30,14 +31,15 @@ class FormMain extends React.Component {
     }
 }
 
-FormMain.propTypes= {
-  handleChangeState: PropTypes.func,  
-  cardName: PropTypes.string,
-  cardJob: PropTypes.string,
-  cardEmail: PropTypes.string,
-  cardTelephone: PropTypes.string,
-  cardLinkedin: PropTypes.string,
-  cardGithub: PropTypes.string,
+FormMain.propTypes = {
+    handleChangeState: PropTypes.func,
+    cardPalette: PropTypes.string,
+    cardName: PropTypes.string,
+    cardJob: PropTypes.string,
+    cardEmail: PropTypes.string,
+    cardTelephone: PropTypes.string,
+    cardLinkedin: PropTypes.string,
+    cardGithub: PropTypes.string,
 }
 
 export default FormMain;

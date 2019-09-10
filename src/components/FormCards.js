@@ -11,7 +11,9 @@ class FormCards extends React.Component {
             <React.Fragment>
                 <FormHeader />
 
-                <FormMain cardName={this.props.cardName}
+                <FormMain 
+                    cardPalette={this.props.cardPalette}
+                    cardName={this.props.cardName}
                     cardJob={this.props.cardJob}
                     cardEmail={this.props.cardEmail}
                     cardTelephone={this.props.cardTelephone}
@@ -27,6 +29,7 @@ class FormCards extends React.Component {
 }
 
 FormCards.propTypes = {
+    cardPalette: PropTypes.string,
     cardName: PropTypes.string,
     cardJob: PropTypes.string,
     cardEmail: PropTypes.string,
