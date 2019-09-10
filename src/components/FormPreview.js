@@ -42,7 +42,8 @@ class FormPreview extends React.Component {
 
 
 FormPreview.propTypes= {
-    handleChangeState: PropTypes.func,  
+    handleChangeState: PropTypes.func, 
+    cardPalette: PropTypes.string, 
     cardName: PropTypes.string,
     cardJob: PropTypes.string,
     cardEmail: PropTypes.string,

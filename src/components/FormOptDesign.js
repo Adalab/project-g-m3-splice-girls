@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 
 class FormOptDesing extends React.Component {
@@ -72,4 +73,8 @@ class FormOptDesing extends React.Component {
     }
 }
 
+FormOptDesing.propTypes = {
+    handleChangeState: PropTypes.func,
+    cardPalette: PropTypes.string
+}
 export default FormOptDesing;

@@ -24,7 +24,8 @@ class FormOption extends React.Component {
 }
 
 FormOption.propTypes= {
-    handleChangeState: PropTypes.func,  
+    handleChangeState: PropTypes.func, 
+    cardPalette: PropTypes.string 
   }
 
 export default FormOption;
