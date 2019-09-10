@@ -23,7 +23,7 @@ class FormPreview extends React.Component {
                                 <a href={this.props.cardEmail === '' ? '#':'mailto:' + this.props.cardEmail} 
                                 className="link__icon__card link__icon__card-mail"> <i className="far fa-envelope card-icon"></i></a>
                             </li>
-                            <li className="li--card item1 supersecret">
+                            <li className={this.props.cardTelephone === '' ? 'li--card item1 supersecret' :'li--card item1'}>
                                 <a href={this.props.cardTelephone === '' ? '#':'tel:' + this.props.cardTelephone} className="link__icon__card link__icon__card-phone"> <i className="fas fa-mobile-alt phone-icon"></i> </a>
                             </li>
                             <li className="li--card item3 supersecret">
