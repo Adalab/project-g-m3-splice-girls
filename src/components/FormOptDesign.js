@@ -3,25 +3,6 @@ import React from 'react';
 
 class FormOptDesing extends React.Component {
     render() {
-        // const STYLEPALETTE11 = { backgroundColor: '#114e4e' }
-        // const STYLEPALETTE12 = { backgroundColor: '#438792' }
-        // const STYLEPALETTE13 = { backgroundColor: '#a2deaf' }
-
-        // const STYLEPALETTE21 = { backgroundColor: '#420101' }
-        // const STYLEPALETTE22 = { backgroundColor: '#bd1010' }
-        // const STYLEPALETTE23 = { backgroundColor: '#e95626' }
-
-        // const STYLEPALETTE31 = { backgroundColor: '#3e5b65' }
-        // const STYLEPALETTE32 = { backgroundColor: '#eab052' }
-        // const STYLEPALETTE33 = { backgroundColor: '#a0c0cf' }
-
-        // const STYLEPALETTE41 = { backgroundColor: '#600060' }
-        // const STYLEPALETTE42 = { backgroundColor: '#aa00aa' }
-        // const STYLEPALETTE43 = { backgroundColor: '#ff00ff' }
-
-        // const STYLEPALETTE51 = { backgroundColor: '#005500' }
-        // const STYLEPALETTE52 = { backgroundColor: '#008000' }
-        // const STYLEPALETTE53 = { backgroundColor: '#00aa55' }
 
         return (
             <fieldset className="design--card">
