@@ -1,5 +1,5 @@
 import React from 'react';
-import './scss/main.scss';
+import './scss/index.scss';
 import iconDesign from './images/object-ungroup-regular.svg';
 import iconFill from './images/keyboard-regular.svg';
 import iconShare from './images/share-alt-solid.svg';
