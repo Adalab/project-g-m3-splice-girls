@@ -7,7 +7,7 @@ class FormOptShare extends React.Component {
         return (
             <div className="share--card">
                 <div className="share__box">
-                    <h2 className="share__title js__title--form">comparte</h2>
+                    <h2 className="share__title js__title--form" id="share">comparte</h2>
                     <div className="share__form drop-down">
                         <div className="create__button-container">
                             <button type="submit" className="create__button">

@@ -10,9 +10,9 @@ class FormOption extends React.Component {
         return (
             <div className="options__box">
                 <form className="create__card" action="https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/" method="POST">
-                    <FormOptDesign title={titulo} handleChangeState={this.props.handleChangeState} cardPalette={this.props.cardPalette}/>
-                    <FormOptFill handleChangeState={this.props.handleChangeState}/>
-                    <FormOptShare />
+                    <FormOptDesign title={titulo} handleChangeState={this.props.handleChangeState} cardPalette={this.props.cardPalette} changeCollap={this.props.changeCollap}/>
+                    <FormOptFill handleChangeState={this.props.handleChangeState} changeCollap={this.props.changeCollap}/>
+                    <FormOptShare changeCollap={this.props.changeCollap}/>
                 </form>
 
             </div>
@@ -24,6 +24,7 @@ class FormOption extends React.Component {
 }
 
 FormOption.propTypes= {
+    changeCollap: PropTypes.func,
     handleChangeState: PropTypes.func, 
     cardPalette: PropTypes.string 
   }

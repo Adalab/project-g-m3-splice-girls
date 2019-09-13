@@ -7,7 +7,8 @@ class FormOptFill extends React.Component {
         return (
             <fieldset className="fill--card">
                 <legend className="hidden">rellena</legend>
-                <h2 className="fill__title js__title--form">rellena</h2>
+                <h2 className="fill__title js__title--form" id="fill" onClick={this.props.changeCollap}>rellena</h2>
+                {(this.props.selectedCollap === 'fill') && !this.props.visible ||
                 <div className="fill__form drop-down">
                     <div className="fill__box--name">
                         <label className="fill_name" htmlFor="name">nombre completo</label>
@@ -44,7 +45,7 @@ class FormOptFill extends React.Component {
                         <label className="fill_github" htmlFor="github">github</label>
                         <input className="field__fill field__fill-icon input--github"value={this.props.cardGithub} type="text" name="github" placeholder="Ej: sally-hill" id="github" onChange={this.props.handleChangeState} required />
                     </div>
-                </div>
+                </div>}
             </fieldset>
 
         );

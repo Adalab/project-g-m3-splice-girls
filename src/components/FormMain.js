@@ -11,6 +11,9 @@ class FormMain extends React.Component {
                 <div className="wrapper__box">
 
                     <FormOption
+                        selectedCollap={this.props.selectedCollap}
+                        visible={this.props.visible}
+                        changeCollap={this.props.changeCollap}
                         handleChangeState={this.props.handleChangeState}
                         cardPalette={this.props.cardPalette}
                         cardName={this.props.cardName}
@@ -41,6 +44,9 @@ class FormMain extends React.Component {
 }
 
 FormMain.propTypes = {
+    selectedCollap: PropTypes.string,
+    visible: PropTypes.bool,
+    changeCollap: PropTypes.func,
     handleChangeState: PropTypes.func,
     cardPalette: PropTypes.string,
     cardName: PropTypes.string,

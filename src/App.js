@@ -18,21 +18,28 @@ class App extends React.Component {
             telephone:'',
             linkedin:'',
             github:'', 
-        }   
+        },
+        visible : false,
+        selectedCollap: ''   
         };
 
         this.handleChangeState = this.handleChangeState.bind(this);
+        this.changeCollap = this.changeCollap.bind(this);
+    }
+    changeCollap (event) {
+        const currentCollap = event.currentTarget.id;
+        console.log(currentCollap);
+               this.setState ({
+            visible: !this.state.visible,
+            selectedCollap: currentCollap
+        }
+        );
     }
 
     handleChangeState(event) {
         const atributo = event.currentTarget.name;
-       
         const value = event.currentTarget.value;
         
-      
-        // const{name}=this.state.userData;
-        // console.log(name);
-
         this.setState(
             
           prevState => {
@@ -46,6 +53,9 @@ class App extends React.Component {
             //<Landing></Landing>
         
             <FormCards 
+            selectedCollap={this.state.selectedCollap}
+            visible={this.state.visible}
+            changeCollap={this.changeCollap}
             cardPalette={this.state.userData.palette}
             cardName={this.state.userData.name} 
             cardJob={this.state.userData.job}

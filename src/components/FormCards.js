@@ -12,6 +12,9 @@ class FormCards extends React.Component {
                 <FormHeader />
 
                 <FormMain 
+                    selectedCollap={this.props.selectedCollap}
+                    visible={this.props.visible}
+                    changeCollap={this.props.changeCollap}
                     cardPalette={this.props.cardPalette}
                     cardName={this.props.cardName}
                     cardJob={this.props.cardJob}
@@ -29,6 +32,9 @@ class FormCards extends React.Component {
 }
 
 FormCards.propTypes = {
+    selectedCollap: PropTypes.string,
+    visible: PropTypes.bool,
+    changeCollap: PropTypes.func,
     cardPalette: PropTypes.string,
     cardName: PropTypes.string,
     cardJob: PropTypes.string,
