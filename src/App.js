@@ -10,6 +10,7 @@ class App extends React.Component {
         super(props)
 
         this.state = {
+        userData : {
             palette: 'palette1',
             name: '',
             job: '',
@@ -17,6 +18,7 @@ class App extends React.Component {
             telephone:'',
             linkedin:'',
             github:'', 
+        }   
         };
 
         this.handleChangeState = this.handleChangeState.bind(this);
@@ -27,11 +29,16 @@ class App extends React.Component {
        
         const value = event.currentTarget.value;
         
-        this.setState({
-            [atributo]: value
-        }, () => {
+      
+        // const{name}=this.state.userData;
+        // console.log(name);
+
+        this.setState(
             
-        });
+          prevState => {
+              return {userData: {...prevState.userData, [atributo] : value}}
+          }  
+            );
     }
 
     render() {
@@ -39,13 +46,13 @@ class App extends React.Component {
             //<Landing></Landing>
         
             <FormCards 
-            cardPalette={this.state.palette}
-            cardName={this.state.name} 
-            cardJob={this.state.job}
-            cardEmail={this.state.email}
-            cardTelephone={this.state.telephone}
-            cardLinkedin={this.state.linkedin} 
-            cardGithub={this.state.github}
+            cardPalette={this.state.userData.palette}
+            cardName={this.state.userData.name} 
+            cardJob={this.state.userData.job}
+            cardEmail={this.state.userData.email}
+            cardTelephone={this.state.userData.telephone}
+            cardLinkedin={this.state.userData.linkedin} 
+            cardGithub={this.state.userData.github}
             handleChangeState={this.handleChangeState} 
             />
         )

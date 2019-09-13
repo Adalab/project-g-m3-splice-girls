@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 class FormOptDesing extends React.Component {
     render() {
- console.log(this.props.cardPalette)
+ 
         return (
             <fieldset className="design--card">
                 <legend className="hidden">diseña</legend>
