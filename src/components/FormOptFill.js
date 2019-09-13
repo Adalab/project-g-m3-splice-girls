@@ -8,7 +8,7 @@ class FormOptFill extends React.Component {
             <fieldset className="fill--card">
                 <legend className="hidden">rellena</legend>
                 <h2 className="fill__title js__title--form" id="fill" onClick={this.props.changeCollap}>rellena</h2>
-                {(this.props.selectedCollap === 'fill') && !this.props.visible ||
+                {!(this.props.selectedCollap === 'fill') && !this.props.visible ||
                 <div className="fill__form drop-down">
                     <div className="fill__box--name">
                         <label className="fill_name" htmlFor="name">nombre completo</label>

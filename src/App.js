@@ -20,7 +20,7 @@ class App extends React.Component {
             github:'', 
         },
         visible : false,
-        selectedCollap: ''   
+        selectedCollap: 'design'   
         };
 
         this.handleChangeState = this.handleChangeState.bind(this);

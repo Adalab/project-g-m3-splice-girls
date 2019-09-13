@@ -4,12 +4,12 @@ import PropTypes from 'prop-types';
 
 class FormOptDesing extends React.Component {
     render() {
-        console.log(this.props.selectedCollap ==="design")
+        console.log(this.props.selectedCollap)
         return (
             <fieldset className="design--card">
                 <legend className="hidden">diseña</legend>
                 <h2 className=" design__title design__title2 js__title--form"  id="design"  onClick={this.props.changeCollap}>{this.props.title}</h2>
-                {((this.props.selectedCollap ==="design") && this.props.visible) ||
+                {!((this.props.selectedCollap ==="design") && !this.props.visible) ||
                 <div className="desing__form--container">
                     <div className="design__form ">
                         <h3 className="colors__title">colores</h3>
