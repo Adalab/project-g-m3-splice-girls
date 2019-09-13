@@ -11,7 +11,7 @@ class App extends React.Component {
 
         this.state = {
         userData : {
-            palette: 'palette1',
+            palette: '1',
             name: '',
             job: '',
             email:'',
