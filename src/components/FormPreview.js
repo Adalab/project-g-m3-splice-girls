@@ -8,7 +8,7 @@ class FormPreview extends React.Component {
             <div className="preview__box">
                 <div className="button-card__box">
                     <button className="reset__button" type="reset"><img src="assets/images/trash-alt-regular.svg" className="far fa-trash-alt" alt="" /><span className="reset__button-title">Reset</span></button>
-                    <div className={this.props.cardPalette === '' ? 'card__box' :  'card__box ' + this.props.cardPalette}>
+                    <div className={this.props.cardPalette === '' ? 'card__box' :  'card__box ' + `palette${this.props.cardPalette}`}>
                         <div className="name-job__box">
                             <p className="name__card">
                                 {this.props.cardName === ''? 'Nombre Apellido': this.props.cardName}
