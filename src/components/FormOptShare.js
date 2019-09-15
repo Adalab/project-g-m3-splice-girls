@@ -1,14 +1,19 @@
 import React from 'react';
 import shareIcon from '../images/address-card-regular.svg';
 import twitterIcon from '../images/twitter-brands.svg';
+import PropTypes from 'prop-types';
 
 class FormOptShare extends React.Component {
     render() {
+        let h2Classname = "share__title js__title--form";
+        if (this.props.visible.share ){
+            h2Classname ="share__title js__title--form share__title2 ";
+        }
         return (
             <div className="share--card">
                 <div className="share__box">
-                    <h2 className="share__title js__title--form" id="share" onClick={this.props.changeCollap}>comparte</h2>
-                    {!((this.props.selectedCollap === 'share') && !this.props.visible) ||
+                    <h2 className={h2Classname} id="share" onClick={this.props.changeCollap} >comparte</h2>
+                    {!this.props.visible.share ||
                         <div className="share__form drop-down">
                             <div className="create__button-container">
                                 <button type="submit" className="create__button">
@@ -29,5 +34,17 @@ class FormOptShare extends React.Component {
         );
     }
 }
-
+FormOptShare.propTypes= {
+    
+    visible: PropTypes.object,
+    changeCollap: PropTypes.func,
+    handleChangeState: PropTypes.func,
+    cardPalette: PropTypes.string,
+    cardName: PropTypes.string,
+    cardJob: PropTypes.string,
+    cardEmail: PropTypes.string,
+    cardTelephone: PropTypes.string,
+    cardLinkedin: PropTypes.string,
+    cardGithub: PropTypes.string,
+  }
 export default FormOptShare;

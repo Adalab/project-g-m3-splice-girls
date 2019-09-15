@@ -4,11 +4,15 @@ import PropTypes from 'prop-types';
 
 class FormOptFill extends React.Component {
     render() {
+        let h2Classname = "fill__title js__title--form";
+        if (this.props.visible.fill ){
+            h2Classname ="fill__title js__title--form fill__title2";
+        }
         return (
             <fieldset className="fill--card">
                 <legend className="hidden">rellena</legend>
-                <h2 className="fill__title js__title--form" id="fill" onClick={this.props.changeCollap}>rellena</h2>
-                {!(this.props.selectedCollap === 'fill') && !this.props.visible ||
+                <h2 className={h2Classname} id="fill" onClick={this.props.changeCollap} >rellena</h2>
+                {!this.props.visible.fill ||
                 <div className="fill__form drop-down">
                     <div className="fill__box--name">
                         <label className="fill_name" htmlFor="name">nombre completo</label>
@@ -52,7 +56,10 @@ class FormOptFill extends React.Component {
     }
 }
 FormOptFill.propTypes= {
-    handleChangeState: PropTypes.func,  
+    
+    visible: PropTypes.object,
+    changeCollap: PropTypes.func,
+    handleChangeState: PropTypes.func,
     cardPalette: PropTypes.string,
     cardName: PropTypes.string,
     cardJob: PropTypes.string,

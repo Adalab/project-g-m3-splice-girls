@@ -4,12 +4,16 @@ import PropTypes from 'prop-types';
 
 class FormOptDesing extends React.Component {
     render() {
+        let h2Classname = "design__title js__title--form";
+        if (this.props.visible.design ){
+            h2Classname ="design__title js__title--form design__title2";
+        }
         console.log(this.props.selectedCollap)
         return (
             <fieldset className="design--card">
                 <legend className="hidden">diseña</legend>
-                <h2 className=" design__title design__title2 js__title--form"  id="design"  onClick={this.props.changeCollap}>{this.props.title}</h2>
-                {!((this.props.selectedCollap ==="design") && !this.props.visible) ||
+                <h2 className={h2Classname}  id="design"  onClick={this.props.changeCollap}>{this.props.title}</h2>
+                { !this.props.visible.design ||
                 <div className="desing__form--container">
                     <div className="design__form ">
                         <h3 className="colors__title">colores</h3>
@@ -76,11 +80,16 @@ class FormOptDesing extends React.Component {
     }
 }
 
-FormOptDesing.propTypes = {
-    selectedCollap: PropTypes.string,
-    visible: PropTypes.bool,
+FormOptDesing.propTypes = {selectedCollap: PropTypes.string,
+    visible: PropTypes.object,
     changeCollap: PropTypes.func,
     handleChangeState: PropTypes.func,
-    cardPalette: PropTypes.string
+    cardPalette: PropTypes.string,
+    cardName: PropTypes.string,
+    cardJob: PropTypes.string,
+    cardEmail: PropTypes.string,
+    cardTelephone: PropTypes.string,
+    cardLinkedin: PropTypes.string,
+    cardGithub: PropTypes.string,
 }
 export default FormOptDesing;

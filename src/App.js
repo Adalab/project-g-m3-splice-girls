@@ -19,8 +19,11 @@ class App extends React.Component {
             linkedin:'',
             github:'', 
         },
-        visible : false,
-        selectedCollap: 'design'   
+        visible : {
+            design : true,
+            fill : false,
+            share: false},
+          
         };
 
         this.handleChangeState = this.handleChangeState.bind(this);
@@ -28,13 +31,30 @@ class App extends React.Component {
     }
     changeCollap (event) {
         const currentCollap = event.currentTarget.id;
-        console.log(currentCollap);
-               this.setState ({
-            visible: !this.state.visible,
-            selectedCollap: currentCollap
+        const prevStateVisible = this.state.visible[currentCollap];
+        const newStateVisible = !prevStateVisible;
+        //const copiaVisible = {...this.state.visible};
+        //console.log(copiaVisible)
+        if(newStateVisible === true){
+           const copiaVisible = {
+                design : false,
+                fill : false,
+                share: false}
+            copiaVisible[currentCollap]=newStateVisible; 
+            //console.log(copiaVisible)
+            this.setState({visible : {design : copiaVisible.design,
+                fill : copiaVisible.fill,
+                share: copiaVisible.share},
+                })
+        } else { 
+            this.setState ({
+                   visible: {...this.state.visible,[currentCollap] : !this.state.visible[currentCollap]},
+                 
+                }
+                )
         }
-        );
-    }
+        };
+
 
     handleChangeState(event) {
         const atributo = event.currentTarget.name;
@@ -53,7 +73,7 @@ class App extends React.Component {
             //<Landing></Landing>
         
             <FormCards 
-            selectedCollap={this.state.selectedCollap}
+            
             visible={this.state.visible}
             changeCollap={this.changeCollap}
             cardPalette={this.state.userData.palette}
