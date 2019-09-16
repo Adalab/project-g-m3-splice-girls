@@ -8,7 +8,6 @@ class FormOptDesing extends React.Component {
         if (this.props.visible.design ){
             h2Classname ="design__title js__title--form design__title2";
         }
-        console.log(this.props.selectedCollap)
         return (
             <fieldset className="design--card">
                 <legend className="hidden">diseña</legend>

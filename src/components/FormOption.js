@@ -12,7 +12,7 @@ class FormOption extends React.Component {
                 <form className="create__card" action="https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/" method="POST">
                     <FormOptDesign title={titulo} handleChangeState={this.props.handleChangeState} cardPalette={this.props.cardPalette} changeCollap={this.props.changeCollap} 
                     visible={this.props.visible}/>
-                    <FormOptFill handleChangeState={this.props.handleChangeState} changeCollap={this.props.changeCollap} visible = {this.props.visible} />
+                    <FormOptFill handleChangeState={this.props.handleChangeState} changeCollap={this.props.changeCollap} visible = {this.props.visible} cardName={this.props.cardName} cardJob={this.props.cardJob} cardEmail={this.props.cardEmail} cardTelephone={this.props.cardTelephone} cardLinkedin={this.props.cardLinkedin} cardGithub={this.props.cardGithub}/>
                     <FormOptShare handleChangeState={this.props.handleChangeState} changeCollap={this.props.changeCollap} visible = {this.props.visible} />
                 </form>
 

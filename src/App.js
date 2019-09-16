@@ -12,6 +12,7 @@ class App extends React.Component {
         this.state = {
         userData : {
             palette: '1',
+            //debería ser un número y deberíamos tener la imagen por defecto
             name: '',
             job: '',
             email:'',
@@ -59,16 +60,33 @@ class App extends React.Component {
     handleChangeState(event) {
         const atributo = event.currentTarget.name;
         const value = event.currentTarget.value;
-        this.handleLocalStorage();
         this.setState(prevState => {
-              return {userData: {...prevState.userData, [atributo] : value}}
-                
-          }  
+              return {userData: {...prevState.userData, [atributo] : value}}  
+          }, ()=>  {this.handleSetLocalStorage();}
             );
     }
 
-    handleLocalStorage=()=>{
+    componentDidMount(){
+        this.handleGetLocalStorage();
+    }
+    handleSetLocalStorage=()=>{
         localStorage.setItem('userData', JSON.stringify(this.state.userData));
+    }
+
+    handleGetLocalStorage=()=>{
+        const savedUserData = JSON.parse(localStorage.getItem('userData'));
+        console.log (savedUserData);
+        this.setState(()=>{
+            if(savedUserData === null){
+                //lo dejas en blanco
+                return (console.log ('no tengo info guardada'))
+            } else {
+                //user data tiene info, me lo pintás 
+                return({
+                    userData: savedUserData
+                })
+            }
+        })
     }
 
     render() {
