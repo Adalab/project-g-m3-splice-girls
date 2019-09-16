@@ -26,7 +26,7 @@ class FormOptFill extends React.Component {
                     </div>
                         <GetAvatar  
                         updateAvatar={this.props.updateAvatar} 
-                        avatar={this.props.userData.avatar}
+                        avatar={this.props.avatar}
                         isAvatarDefault={this.props.isAvatarDefault} />
                     {/* <div className="fill__box--photo">
                         <label className="fill_photo" htmlFor="photo">imagen de perfil</label>

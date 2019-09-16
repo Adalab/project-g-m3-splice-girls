@@ -12,7 +12,7 @@ class FormCards extends React.Component {
                 <FormHeader />
 
                 <FormMain
-                    avatar={this.props.userData.avatar}
+                    avatar={this.props.avatar}
                     isAvatarDefault={this.props.isAvatarDefault}
                     updateAvatar={this.props.updateAvatar}
                     visible={this.props.visible}

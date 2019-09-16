@@ -19,7 +19,7 @@ class FormPreview extends React.Component {
                             </p>
                         </div>
                         {/* <div className="image-card js__profile-image" style={{backgroundImage:`url(${DefaultUrlImage})`}}></div> */}
-                        <Profile avatar={this.props.userData.avatar}/>
+                        <Profile avatar={this.props.avatar}/>
                         <ul className="rrss__list">
                             <li className={this.props.cardEmail === '' ? 'li--card item2 supersecret':'li--card item2'}>
                                 <a href={this.props.cardEmail === '' ? '#':'mailto:' + this.props.cardEmail} 

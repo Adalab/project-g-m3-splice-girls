@@ -3,7 +3,7 @@ import React from 'react';
 
 //import Landing from './Landing';
 import FormCards from './components/FormCards';
-import DefaultImage from './DefaultImage';
+import DefaultImage from './components/DefaultImage';
 
 
 class App extends React.Component {

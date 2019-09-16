@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import './GetAvatar.css';
+// import './GetAvatar.css';
 import PropTypes from 'prop-types';
 
 class GetAvatar extends Component {
