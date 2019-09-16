@@ -59,13 +59,16 @@ class App extends React.Component {
     handleChangeState(event) {
         const atributo = event.currentTarget.name;
         const value = event.currentTarget.value;
-        
-        this.setState(
-            
-          prevState => {
+        this.handleLocalStorage();
+        this.setState(prevState => {
               return {userData: {...prevState.userData, [atributo] : value}}
+                
           }  
             );
+    }
+
+    handleLocalStorage=()=>{
+        localStorage.setItem('userData', JSON.stringify(this.state.userData));
     }
 
     render() {
