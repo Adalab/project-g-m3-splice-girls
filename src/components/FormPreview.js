@@ -1,5 +1,6 @@
 import React from 'react';
-import DefaultUrlImage from './DefaultUrlImage';
+import Profile from './Profile'
+
 import PropTypes from 'prop-types';
 
 class FormPreview extends React.Component {
@@ -17,7 +18,8 @@ class FormPreview extends React.Component {
                                 {this.props.cardJob === ''? 'front-end developer': this.props.cardJob}
                             </p>
                         </div>
-                        <div className="image-card js__profile-image" style={{backgroundImage:`url(${DefaultUrlImage})`}}></div>
+                        {/* <div className="image-card js__profile-image" style={{backgroundImage:`url(${DefaultUrlImage})`}}></div> */}
+                        <Profile avatar={this.props.userData.avatar}/>
                         <ul className="rrss__list">
                             <li className={this.props.cardEmail === '' ? 'li--card item2 supersecret':'li--card item2'}>
                                 <a href={this.props.cardEmail === '' ? '#':'mailto:' + this.props.cardEmail} 
@@ -42,6 +44,7 @@ class FormPreview extends React.Component {
 
 
 FormPreview.propTypes= {
+    avatar:PropTypes.string,
     handleChangeState: PropTypes.func, 
     cardPalette: PropTypes.string, 
     cardName: PropTypes.string,

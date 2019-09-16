@@ -3,6 +3,7 @@ import React from 'react';
 
 //import Landing from './Landing';
 import FormCards from './components/FormCards';
+import DefaultImage from './DefaultImage';
 
 
 class App extends React.Component {
@@ -10,7 +11,9 @@ class App extends React.Component {
         super(props)
 
         this.state = {
+        isAvatarDefault: true,
         userData : {
+            avatar: DefaultImage,
             palette: '1',
             name: '',
             job: '',
@@ -25,10 +28,22 @@ class App extends React.Component {
             share: false},
           
         };
-
+        this.updateAvatar = this.updateAvatar.bind(this);
         this.handleChangeState = this.handleChangeState.bind(this);
         this.changeCollap = this.changeCollap.bind(this);
     }
+
+    updateAvatar(img) {
+        const {userData} = this.state;
+        this.setState(prevState => {
+          const newUserData = {...userData, avatar: img};
+          return {
+            userData: newUserData,
+            isAvatarDefault: false
+          }
+        });
+      }
+
     changeCollap (event) {
         const currentCollap = event.currentTarget.id;
         const prevStateVisible = this.state.visible[currentCollap];
@@ -73,7 +88,10 @@ class App extends React.Component {
             //<Landing></Landing>
         
             <FormCards 
-            
+
+            avatar={this.state.userData.avatar} 
+            isAvatarDefault={this.state.isAvatarDefault} 
+            updateAvatar={this.updateAvatar}       
             visible={this.state.visible}
             changeCollap={this.changeCollap}
             cardPalette={this.state.userData.palette}

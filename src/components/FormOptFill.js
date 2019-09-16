@@ -1,4 +1,5 @@
 import React from 'react';
+import GetAvatar from './GetAvatar';
 import PropTypes from 'prop-types';
 
 
@@ -23,15 +24,18 @@ class FormOptFill extends React.Component {
                         <label className="fill_job" htmlFor="job">puesto</label>
                         <input className="field__fill field__fill-job" value={this.props.cardJob} type="text" name="job" placeholder="Ej: Front-end unicorn" id="job_position" onChange={this.props.handleChangeState} required />
                     </div>
-
-                    <div className="fill__box--photo">
+                        <GetAvatar  
+                        updateAvatar={this.props.updateAvatar} 
+                        avatar={this.props.userData.avatar}
+                        isAvatarDefault={this.props.isAvatarDefault} />
+                    {/* <div className="fill__box--photo">
                         <label className="fill_photo" htmlFor="photo">imagen de perfil</label>
                         <input className="hidden js__profile-upload-btn" type="file" name="photo" id="photo" required />
                         <div className="photo__button-preview">
                             <button className="photo__button js__profile-trigger" type="button">añadir imagen</button>
                             <div className="photo__preview js__profile-preview"></div>
                         </div>
-                    </div>
+                    </div> */}
 
                     <div className="fill__box--email">
                         <label className="fill_email" htmlFor="email" >email</label>
@@ -57,6 +61,9 @@ class FormOptFill extends React.Component {
 }
 FormOptFill.propTypes= {
     
+    avatar:PropTypes.string,
+    isAvatarDefault:PropTypes.string,
+    updateAvatar: PropTypes.func, 
     visible: PropTypes.object,
     changeCollap: PropTypes.func,
     handleChangeState: PropTypes.func,
