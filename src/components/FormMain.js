@@ -11,7 +11,9 @@ class FormMain extends React.Component {
                 <div className="wrapper__box">
 
                     <FormOption
-                        
+                        avatar={this.props.avatar}
+                        isAvatarDefault={this.props.isAvatarDefault}
+                        updateAvatar={this.props.updateAvatar}
                         visible={this.props.visible}
                         changeCollap={this.props.changeCollap}
                         handleChangeState={this.props.handleChangeState}
@@ -23,6 +25,7 @@ class FormMain extends React.Component {
                         cardLinkedin={this.props.cardLinkedin}
                         cardGithub={this.props.cardGithub} />
                     <FormPreview
+                        avatar={this.props.avatar}
                         cardPalette={this.props.cardPalette}
                         cardName={this.props.cardName}
                         cardJob={this.props.cardJob}
@@ -45,6 +48,9 @@ class FormMain extends React.Component {
 
 FormMain.propTypes = {
     
+    avatar:PropTypes.string,
+    isAvatarDefault:PropTypes.string,
+    updateAvatar: PropTypes.func, 
     visible: PropTypes.object,
     changeCollap: PropTypes.func,
     handleChangeState: PropTypes.func,
