@@ -137,7 +137,7 @@ class App extends React.Component {
             <Route exact path='/' component= {Landing} />
             <Route path='/cards' 
             render={()=> <FormCards 
-
+                handleClickReset={this.handleClickReset}
                 avatar={this.state.userData.avatar} 
                 isAvatarDefault={this.state.isAvatarDefault} 
                 updateAvatar={this.updateAvatar}       
