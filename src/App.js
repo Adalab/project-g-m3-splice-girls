@@ -1,10 +1,10 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 
-//import Landing from './Landing';
+import Landing from './Landing';
 import FormCards from './components/FormCards';
 import DefaultImage from './components/DefaultImage';
-
+import { Route, Switch} from 'react-router-dom'; 
 
 class App extends React.Component {
     constructor(props) {
@@ -107,7 +107,11 @@ class App extends React.Component {
 
     render() {
         return (
-            //<Landing></Landing>
+            <React.Fragment>
+        <Switch>
+            <Route exact path='/' component= {Landing} />
+            <Route path='/cards' component={FormCards} />
+        </Switch>
         
             <FormCards 
 
@@ -125,6 +129,7 @@ class App extends React.Component {
             cardGithub={this.state.userData.github}
             handleChangeState={this.handleChangeState} 
             />
+        </React.Fragment>
         )
 
     }
