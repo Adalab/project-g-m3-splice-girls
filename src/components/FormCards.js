@@ -11,8 +11,10 @@ class FormCards extends React.Component {
             <React.Fragment>
                 <FormHeader />
 
-                <FormMain 
-                    
+                <FormMain
+                    avatar={this.props.avatar}
+                    isAvatarDefault={this.props.isAvatarDefault}
+                    updateAvatar={this.props.updateAvatar}
                     visible={this.props.visible}
                     changeCollap={this.props.changeCollap}
                     cardPalette={this.props.cardPalette}
@@ -32,7 +34,10 @@ class FormCards extends React.Component {
 }
 
 FormCards.propTypes = {
-    
+
+    avatar:PropTypes.string,
+    isAvatarDefault:PropTypes.string,
+    updateAvatar: PropTypes.func, 
     visible: PropTypes.object,
     changeCollap: PropTypes.func,
     cardPalette: PropTypes.string,
