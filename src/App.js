@@ -36,7 +36,7 @@ class App extends React.Component {
     }
 
     updateAvatar(img) {
-        console.log(img);
+        
         const {userData} = this.state;
         this.setState(prevState => {
           const newUserData = {...userData, avatar: img};
@@ -51,15 +51,12 @@ class App extends React.Component {
         const currentCollap = event.currentTarget.id;
         const prevStateVisible = this.state.visible[currentCollap];
         const newStateVisible = !prevStateVisible;
-        //const copiaVisible = {...this.state.visible};
-        //console.log(copiaVisible)
         if(newStateVisible === true){
            const copiaVisible = {
                 design : false,
                 fill : false,
                 share: false}
             copiaVisible[currentCollap]=newStateVisible; 
-            //console.log(copiaVisible)
             this.setState({visible : {design : copiaVisible.design,
                 fill : copiaVisible.fill,
                 share: copiaVisible.share},
@@ -95,7 +92,6 @@ class App extends React.Component {
 
     handleGetLocalStorage=()=>{
         const savedUserData = JSON.parse(localStorage.getItem('userData'));
-        console.log (savedUserData);
         this.setState(()=>{
             if(savedUserData === null){
                 //lo dejas en blanco
@@ -130,7 +126,6 @@ class App extends React.Component {
                   
                 }
         )
-        console.log(event)
     }
 
     render() {

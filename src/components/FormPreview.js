@@ -44,16 +44,15 @@ class FormPreview extends React.Component {
 
 
 FormPreview.propTypes= {
-    handleClickReset: PropTypes.func,
-    avatar:PropTypes.string,
-    handleChangeState: PropTypes.func, 
-    cardPalette: PropTypes.number, 
-    cardName: PropTypes.string,
-    cardJob: PropTypes.string,
-    cardEmail: PropTypes.string,
-    cardTelephone: PropTypes.string,
-    cardLinkedin: PropTypes.string,
-    cardGithub: PropTypes.string,
+    handleClickReset: PropTypes.func.isRequired,
+    avatar:PropTypes.string.isRequired,
+    cardPalette: PropTypes.number.isRequired, 
+    cardName: PropTypes.string.isRequired,
+    cardJob: PropTypes.string.isRequired,
+    cardEmail: PropTypes.string.isRequired,
+    cardTelephone: PropTypes.string.isRequired,
+    cardLinkedin: PropTypes.string.isRequired,
+    cardGithub: PropTypes.string.isRequired,
   }
 
 export default FormPreview;
