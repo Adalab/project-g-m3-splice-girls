@@ -32,6 +32,7 @@ class App extends React.Component {
         this.updateAvatar = this.updateAvatar.bind(this);
         this.handleChangeState = this.handleChangeState.bind(this);
         this.changeCollap = this.changeCollap.bind(this);
+        this.handleClickReset = this.handleClickReset.bind(this);
     }
 
     updateAvatar(img) {
@@ -103,6 +104,30 @@ class App extends React.Component {
                 })
             }
         })
+    }
+
+    handleClickReset(event) {
+        this.setState(
+            {
+                isAvatarDefault: true,
+                userData : {
+                    avatar: DefaultImage,
+                    palette: '1',
+                    name: '',
+                    job: '',
+                    email:'',
+                    telephone:'',
+                    linkedin:'',
+                    github:'', 
+                },
+                visible : {
+                    design : true,
+                    fill : false,
+                    share: false},
+                  
+                }
+        )
+        console.log(event)
     }
 
     render() {
