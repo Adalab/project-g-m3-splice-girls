@@ -26,7 +26,8 @@ class FormCards extends React.Component {
                     cardTelephone={this.props.cardTelephone}
                     cardLinkedin={this.props.cardLinkedin}
                     cardGithub={this.props.cardGithub}
-                    handleChangeState={this.props.handleChangeState} />
+                    handleChangeState={this.props.handleChangeState}
+                    handleSendData={this.props.handleSendData} />
 
                 <FormFooter />
 
@@ -50,5 +51,6 @@ FormCards.propTypes = {
     cardLinkedin: PropTypes.string,
     cardGithub: PropTypes.string,
     handleChangeState: PropTypes.func,
+    handleSendData: PropTypes.func.isRequired,
 }
 export default FormCards;
