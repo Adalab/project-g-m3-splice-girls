@@ -16,22 +16,26 @@ class FormOption extends React.Component {
                     cardPalette={this.props.cardPalette} 
                     changeCollap={this.props.changeCollap} 
                     visible={this.props.visible}/>
-                    <FormOptFill 
-                    updateAvatar={this.props.updateAvatar} 
-                    avatar={this.props.avatar}
-                    isAvatarDefault={this.props.isAvatarDefault} 
-                    handleChangeState={this.props.handleChangeState} 
-                    changeCollap={this.props.changeCollap} 
-                    visible = {this.props.visible} />
+                    <FormOptFill handleChangeState={this.props.handleChangeState}
+                     changeCollap={this.props.changeCollap} 
+                     visible = {this.props.visible} 
+                     cardName={this.props.cardName} 
+                     cardJob={this.props.cardJob} 
+                     cardEmail={this.props.cardEmail} 
+                     cardTelephone={this.props.cardTelephone} 
+                     cardLinkedin={this.props.cardLinkedin} 
+                     cardGithub={this.props.cardGithub}
+                     updateAvatar={this.props.updateAvatar} 
+                     avatar={this.props.avatar}
+                     isAvatarDefault={this.props.isAvatarDefault} />
                     <FormOptShare 
                     handleChangeState={this.props.handleChangeState} 
                     changeCollap={this.props.changeCollap} 
                     visible = {this.props.visible} />
+                   
                 </form>
 
             </div>
-
-
 
         );
     }
