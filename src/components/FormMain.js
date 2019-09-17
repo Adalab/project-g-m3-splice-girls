@@ -25,6 +25,7 @@ class FormMain extends React.Component {
                         cardLinkedin={this.props.cardLinkedin}
                         cardGithub={this.props.cardGithub} />
                     <FormPreview
+                        handleClickReset={this.props.handleClickReset}
                         avatar={this.props.avatar}
                         cardPalette={this.props.cardPalette}
                         cardName={this.props.cardName}
@@ -47,7 +48,7 @@ class FormMain extends React.Component {
 }
 
 FormMain.propTypes = {
-    
+    handleClickReset: PropTypes.func,
     avatar:PropTypes.string,
     isAvatarDefault:PropTypes.bool,
     updateAvatar: PropTypes.func, 
