@@ -35,16 +35,8 @@ class FormOptShare extends React.Component {
     }
 }
 FormOptShare.propTypes= {
-    
-    visible: PropTypes.object,
-    changeCollap: PropTypes.func,
-    handleChangeState: PropTypes.func,
-    cardPalette: PropTypes.number,
-    cardName: PropTypes.string,
-    cardJob: PropTypes.string,
-    cardEmail: PropTypes.string,
-    cardTelephone: PropTypes.string,
-    cardLinkedin: PropTypes.string,
-    cardGithub: PropTypes.string,
+    visible: PropTypes.object.isRequired,
+    changeCollap: PropTypes.func.isRequired,
+    handleChangeState: PropTypes.func.isRequired,
   }
 export default FormOptShare;
