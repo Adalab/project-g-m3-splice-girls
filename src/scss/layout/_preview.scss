@@ -62,7 +62,7 @@
     font-size: 18px;
     width: 220px;
     height: auto;
-    overflow-x: hidden;
+    // overflow-x: hidden;
     word-wrap: break-word;
     font-family: $font-family--card;
     font-weight: $weight--bold;
@@ -75,7 +75,6 @@
     font-size: 16px;
     width: 220px;
     height: auto;
-    overflow-x: hidden;
     word-wrap: break-word;
     font-family: $font-family--card;
     font-weight: $weight--regular;
