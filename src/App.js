@@ -1,10 +1,10 @@
 import React from 'react';
 // import PropTypes from 'prop-types';
 
-//import Landing from './Landing';
+import Landing from './Landing';
 import FormCards from './components/FormCards';
 import DefaultImage from './components/DefaultImage';
-
+import { Route, Switch} from 'react-router-dom'; 
 
 class App extends React.Component {
     constructor(props) {
@@ -132,24 +132,30 @@ class App extends React.Component {
 
     render() {
         return (
-            //<Landing></Landing>
+            <React.Fragment>
+        <Switch>
+            <Route exact path='/' component= {Landing} />
+            <Route path='/cards' 
+            render={()=> <FormCards 
+
+                avatar={this.state.userData.avatar} 
+                isAvatarDefault={this.state.isAvatarDefault} 
+                updateAvatar={this.updateAvatar}       
+                visible={this.state.visible}
+                changeCollap={this.changeCollap}
+                cardPalette={this.state.userData.palette}
+                cardName={this.state.userData.name} 
+                cardJob={this.state.userData.job}
+                cardEmail={this.state.userData.email}
+                cardTelephone={this.state.userData.telephone}
+                cardLinkedin={this.state.userData.linkedin} 
+                cardGithub={this.state.userData.github}
+                handleChangeState={this.handleChangeState} 
+                />}
+                />
+        </Switch>
         
-            <FormCards 
-            handleClickReset={this.handleClickReset}
-            avatar={this.state.userData.avatar} 
-            isAvatarDefault={this.state.isAvatarDefault} 
-            updateAvatar={this.updateAvatar}       
-            visible={this.state.visible}
-            changeCollap={this.changeCollap}
-            cardPalette={this.state.userData.palette}
-            cardName={this.state.userData.name} 
-            cardJob={this.state.userData.job}
-            cardEmail={this.state.userData.email}
-            cardTelephone={this.state.userData.telephone}
-            cardLinkedin={this.state.userData.linkedin} 
-            cardGithub={this.state.userData.github}
-            handleChangeState={this.handleChangeState} 
-            />
+        </React.Fragment>
         )
 
     }
