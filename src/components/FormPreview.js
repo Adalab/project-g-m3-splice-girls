@@ -47,7 +47,7 @@ FormPreview.propTypes= {
     handleClickReset: PropTypes.func,
     avatar:PropTypes.string,
     handleChangeState: PropTypes.func, 
-    cardPalette: PropTypes.string, 
+    cardPalette: PropTypes.number, 
     cardName: PropTypes.string,
     cardJob: PropTypes.string,
     cardEmail: PropTypes.string,

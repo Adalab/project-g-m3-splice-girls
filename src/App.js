@@ -14,7 +14,7 @@ class App extends React.Component {
         isAvatarDefault: true,
         userData : {
             avatar: DefaultImage,
-            palette: '1',
+            palette: 1,
             //debería ser un número y deberíamos tener la imagen por defecto
             name: '',
             job: '',
@@ -76,7 +76,10 @@ class App extends React.Component {
 
     handleChangeState(event) {
         const atributo = event.currentTarget.name;
-        const value = event.currentTarget.value;
+        let value = parseInt(event.currentTarget.value);
+        // if(atributo ==="palette" ){
+        //     value = parseInt(value);
+        // }
         this.setState(prevState => {
               return {userData: {...prevState.userData, [atributo] : value}}  
           }, ()=>  {this.handleSetLocalStorage();}
@@ -112,7 +115,7 @@ class App extends React.Component {
                 isAvatarDefault: true,
                 userData : {
                     avatar: DefaultImage,
-                    palette: '1',
+                    palette: 1,
                     name: '',
                     job: '',
                     email:'',

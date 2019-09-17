@@ -42,7 +42,7 @@ FormCards.propTypes = {
     updateAvatar: PropTypes.func, 
     visible: PropTypes.object,
     changeCollap: PropTypes.func,
-    cardPalette: PropTypes.string,
+    cardPalette: PropTypes.number,
     cardName: PropTypes.string,
     cardJob: PropTypes.string,
     cardEmail: PropTypes.string,
