@@ -12,6 +12,7 @@ class FormCards extends React.Component {
                 <FormHeader />
 
                 <FormMain
+                    handleClickReset={this.props.handleClickReset}
                     avatar={this.props.avatar}
                     isAvatarDefault={this.props.isAvatarDefault}
                     updateAvatar={this.props.updateAvatar}
@@ -34,7 +35,7 @@ class FormCards extends React.Component {
 }
 
 FormCards.propTypes = {
-
+    handleClickReset: PropTypes.func,
     avatar:PropTypes.string,
     isAvatarDefault:PropTypes.bool,
     updateAvatar: PropTypes.func, 
