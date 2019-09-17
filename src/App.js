@@ -35,6 +35,7 @@ class App extends React.Component {
     }
 
     updateAvatar(img) {
+        console.log(img);
         const {userData} = this.state;
         this.setState(prevState => {
           const newUserData = {...userData, avatar: img};
@@ -42,7 +43,7 @@ class App extends React.Component {
             userData: newUserData,
             isAvatarDefault: false
           }
-        });
+        },()=>{this.handleSetLocalStorage()});
       }
 
     changeCollap (event) {
