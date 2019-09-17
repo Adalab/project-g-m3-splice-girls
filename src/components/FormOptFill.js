@@ -62,7 +62,7 @@ class FormOptFill extends React.Component {
 FormOptFill.propTypes= {
     
     avatar:PropTypes.string,
-    isAvatarDefault:PropTypes.string,
+    isAvatarDefault:PropTypes.bool,
     updateAvatar: PropTypes.func, 
     visible: PropTypes.object,
     changeCollap: PropTypes.func,
