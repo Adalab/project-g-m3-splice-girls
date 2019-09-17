@@ -110,25 +110,26 @@ class App extends React.Component {
             <React.Fragment>
         <Switch>
             <Route exact path='/' component= {Landing} />
-            <Route path='/cards' component={FormCards} />
+            <Route path='/cards' 
+            render={()=> <FormCards 
+
+                avatar={this.state.userData.avatar} 
+                isAvatarDefault={this.state.isAvatarDefault} 
+                updateAvatar={this.updateAvatar}       
+                visible={this.state.visible}
+                changeCollap={this.changeCollap}
+                cardPalette={this.state.userData.palette}
+                cardName={this.state.userData.name} 
+                cardJob={this.state.userData.job}
+                cardEmail={this.state.userData.email}
+                cardTelephone={this.state.userData.telephone}
+                cardLinkedin={this.state.userData.linkedin} 
+                cardGithub={this.state.userData.github}
+                handleChangeState={this.handleChangeState} 
+                />}
+                />
         </Switch>
         
-            <FormCards 
-
-            avatar={this.state.userData.avatar} 
-            isAvatarDefault={this.state.isAvatarDefault} 
-            updateAvatar={this.updateAvatar}       
-            visible={this.state.visible}
-            changeCollap={this.changeCollap}
-            cardPalette={this.state.userData.palette}
-            cardName={this.state.userData.name} 
-            cardJob={this.state.userData.job}
-            cardEmail={this.state.userData.email}
-            cardTelephone={this.state.userData.telephone}
-            cardLinkedin={this.state.userData.linkedin} 
-            cardGithub={this.state.userData.github}
-            handleChangeState={this.handleChangeState} 
-            />
         </React.Fragment>
         )
 
