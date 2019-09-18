@@ -43,7 +43,7 @@ class FormOptFill extends React.Component {
                     </div>
                     <div className="fill__box--phone">
                         <label className="fill_phone" htmlFor="telephone">teléfono</label>
-                        <input className="field__fill field__fill-icon input--phone" value={this.props.cardTelephone} type="tel" name="telephone" placeholder="Ej: 555-55-55-55" id="telephone" onChange={this.props.handleChangeState} />
+                        <input className="field__fill field__fill-icon input--phone" value={this.props.cardTelephone} type="tel" name="phone" placeholder="Ej: 555-55-55-55" id="telephone" onChange={this.props.handleChangeState} />
                     </div>
                     <div className="fill__box--linkedin">
                         <label className="fill_linkedin" htmlFor="linkedin">linkedin</label>
@@ -61,19 +61,18 @@ class FormOptFill extends React.Component {
 }
 FormOptFill.propTypes= {
     
-    avatar:PropTypes.string,
-    isAvatarDefault:PropTypes.bool,
-    updateAvatar: PropTypes.func, 
-    visible: PropTypes.object,
-    changeCollap: PropTypes.func,
-    handleChangeState: PropTypes.func,
-    cardPalette: PropTypes.number,
-    cardName: PropTypes.string,
-    cardJob: PropTypes.string,
-    cardEmail: PropTypes.string,
-    cardTelephone: PropTypes.string,
-    cardLinkedin: PropTypes.string,
-    cardGithub: PropTypes.string,
+    avatar:PropTypes.string.isRequired,
+    isAvatarDefault:PropTypes.bool.isRequired,
+    updateAvatar: PropTypes.func.isRequired, 
+    visible: PropTypes.object.isRequired,
+    changeCollap: PropTypes.func.isRequired,
+    handleChangeState: PropTypes.func.isRequired,
+    cardName: PropTypes.string.isRequired,
+    cardJob: PropTypes.string.isRequired,
+    cardEmail: PropTypes.string.isRequired,
+    cardTelephone: PropTypes.string.isRequired,
+    cardLinkedin: PropTypes.string.isRequired,
+    cardGithub: PropTypes.string.isRequired,
   }
 
 

@@ -12,12 +12,12 @@ class App extends React.Component {
         this.state = {
             isAvatarDefault: true,
             userData: {
-                avatar: DefaultImage,
+                photo: DefaultImage,
                 palette: 1,
                 name: '',
                 job: '',
                 email: '',
-                telephone: '',
+                phone: '',
                 linkedin: '',
                 github: '',
             },
@@ -36,10 +36,10 @@ class App extends React.Component {
     }
 
     updateAvatar(img) {
-        console.log(img);
-        const { userData } = this.state;
+        
+        const {userData} = this.state;
         this.setState(prevState => {
-            const newUserData = { ...userData, avatar: img };
+            const newUserData = { ...userData, photo: img };
             return {
                 userData: newUserData,
                 isAvatarDefault: false
@@ -51,34 +51,34 @@ class App extends React.Component {
         const currentCollap = event.currentTarget.id;
         const prevStateVisible = this.state.visible[currentCollap];
         const newStateVisible = !prevStateVisible;
-        if (newStateVisible === true) {
-            const copiaVisible = {
-                design: false,
-                fill: false,
+        if(newStateVisible === true){
+           const copiaVisible = {
+                design : false,
+                fill : false,
                 share: false
             }
-            copiaVisible[currentCollap] = newStateVisible;
+            copiaVisible[currentCollap]= newStateVisible; 
             this.setState({
-                visible: {
-                    design: copiaVisible.design,
-                    fill: copiaVisible.fill,
-                    share: copiaVisible.share
+                visible : {
+                design : copiaVisible.design,
+                fill : copiaVisible.fill,
+                share: copiaVisible.share
                 },
             })
-        } else {
-            this.setState({
-                visible: { ...this.state.visible, [currentCollap]: !this.state.visible[currentCollap] },
-
-            }
-            )
+        } else { 
+            this.setState ({
+                   visible: {...this.state.visible,[currentCollap] : !this.state.visible[currentCollap]},
+            })
         }
     };
 
 
     handleChangeState(event) {
         const atributo = event.currentTarget.name;
-        // let value = parseInt(event.currentTarget.value);
         let value = event.currentTarget.value;
+        if (atributo === 'palette') {
+            value = parseInt(value);
+        }
         this.setState(prevState => {
             return { userData: { ...prevState.userData, [atributo]: value } }
         }, () => { this.handleSetLocalStorage(); }
@@ -94,10 +94,9 @@ class App extends React.Component {
 
     handleGetLocalStorage = () => {
         const savedUserData = JSON.parse(localStorage.getItem('userData'));
-        console.log(savedUserData);
-        this.setState(() => {
-            if (savedUserData === null) {
-                return (console.log('no tengo info guardada'))
+        this.setState(()=>{
+            if(savedUserData === null){
+                return (console.log ('no tengo info guardada'))
             } else {
                 return ({
                     userData: savedUserData
@@ -111,12 +110,12 @@ class App extends React.Component {
             {
                 isAvatarDefault: true,
                 userData: {
-                    avatar: DefaultImage,
+                    photo: DefaultImage,
                     palette: 1,
                     name: '',
                     job: '',
                     email: '',
-                    telephone: '',
+                    phone: '',
                     linkedin: '',
                     github: '',
                 },
@@ -128,7 +127,6 @@ class App extends React.Component {
 
             }
         )
-        console.log(event)
     }
 
     handleSendData() {
@@ -147,7 +145,7 @@ class App extends React.Component {
                     <Route path='/cards'
                         render={() => <FormCards
                             handleClickReset={this.handleClickReset}
-                            avatar={this.state.userData.avatar}
+                            avatar={this.state.userData.photo}
                             isAvatarDefault={this.state.isAvatarDefault}
                             updateAvatar={this.updateAvatar}
                             visible={this.state.visible}
@@ -156,7 +154,7 @@ class App extends React.Component {
                             cardName={this.state.userData.name}
                             cardJob={this.state.userData.job}
                             cardEmail={this.state.userData.email}
-                            cardTelephone={this.state.userData.telephone}
+                            cardTelephone={this.state.userData.phone}
                             cardLinkedin={this.state.userData.linkedin}
                             cardGithub={this.state.userData.github}
                             handleChangeState={this.handleChangeState}

@@ -2,8 +2,8 @@
 
 const ENDPOINT = 'https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/';
 
-const createCard = (datos) => {
-    fetch(ENDPOINT, {
+const createdCard = (datos) => {
+    return fetch(ENDPOINT, {
         method: 'POST',
         body: JSON.stringify(datos),
         headers: {
@@ -14,4 +14,4 @@ const createCard = (datos) => {
 }
     
 
-export { createCard };
+export { createdCard };
