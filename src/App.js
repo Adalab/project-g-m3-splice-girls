@@ -2,6 +2,7 @@ import React from 'react';
 import Landing from './Landing';
 import FormCards from './components/FormCards';
 import DefaultImage from './components/DefaultImage';
+import {createdCard} from './services/Service';
 import { Route, Switch } from 'react-router-dom';
 
 class App extends React.Component {
@@ -131,15 +132,7 @@ class App extends React.Component {
     }
 
     handleSendData() {
-
-        fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
-            method: 'POST',
-            body: JSON.stringify(this.state.userData),
-            headers: {
-                'content-type': 'application/json'
-            }
-        })
-            .then(response => response.json())
+            createdCard(this.state.userData)       
             .then(data => {
                 console.log(data);
             });
