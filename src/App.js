@@ -131,23 +131,10 @@ class App extends React.Component {
     }
 
     handleSendData() {
-        console.log('soy el handleset');
-        const fakeUser = {
-            palette: 1,
-            name: "María García",
-            job: "Front-end developer",
-            phone: "+34 666666666",
-            email: "mariagar@example.com",
-            linkedin: "mariagar",
-            github: "mariagar",
-            photo: DefaultImage
-           };
-
-
 
         fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
             method: 'POST',
-            body: JSON.stringify(fakeUser),
+            body: JSON.stringify(this.state.userData),
             headers: {
                 'content-type': 'application/json'
             }
