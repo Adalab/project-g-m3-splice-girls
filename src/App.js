@@ -131,6 +131,7 @@ class App extends React.Component {
     }
 
     handleSendData() {
+        console.log('soy el handleset');
         const fakeUser = {
             palette: 1,
             name: "María García",
@@ -141,7 +142,10 @@ class App extends React.Component {
             github: "mariagar",
             photo: DefaultImage
            };
-        (fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
+
+
+
+        fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/', {
             method: 'POST',
             body: JSON.stringify(fakeUser),
             headers: {
@@ -151,7 +155,7 @@ class App extends React.Component {
             .then(response => response.json())
             .then(data => {
                 console.log(data);
-            }))
+            });
     };
 
 
