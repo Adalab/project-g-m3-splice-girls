@@ -43,7 +43,7 @@ class FormOptFill extends React.Component {
                     </div>
                     <div className="fill__box--phone">
                         <label className="fill_phone" htmlFor="telephone">teléfono</label>
-                        <input className="field__fill field__fill-icon input--phone" value={this.props.cardTelephone} type="tel" name="telephone" placeholder="Ej: 555-55-55-55" id="telephone" onChange={this.props.handleChangeState} />
+                        <input className="field__fill field__fill-icon input--phone" value={this.props.cardTelephone} type="tel" name="phone" placeholder="Ej: 555-55-55-55" id="telephone" onChange={this.props.handleChangeState} />
                     </div>
                     <div className="fill__box--linkedin">
                         <label className="fill_linkedin" htmlFor="linkedin">linkedin</label>

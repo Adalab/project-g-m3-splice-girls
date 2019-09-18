@@ -16,7 +16,7 @@ class FormOptShare extends React.Component {
                     {!this.props.visible.share ||
                         <div className="share__form drop-down">
                             <div className="create__button-container">
-                                <button type="submit" className="create__button">
+                                <button type="submit" className="create__button" onClick={this.props.handleSendData}>
                                     <img className="create__button--icon" src={shareIcon} alt="" />crear tarjeta</button>
                             </div>
                             <div className="card__created--info drop-down">
@@ -38,5 +38,6 @@ FormOptShare.propTypes= {
     visible: PropTypes.object.isRequired,
     changeCollap: PropTypes.func.isRequired,
     handleChangeState: PropTypes.func.isRequired,
+    handleSendData: PropTypes.func.isRequired
   }
 export default FormOptShare;
