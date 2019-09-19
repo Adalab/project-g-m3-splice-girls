@@ -67,7 +67,7 @@ class App extends React.Component {
                      }})
                  } else { 
                      
-                    return {visible:{...prevState.visible,[currentCollap] : !this.state.visible[currentCollap]}};
+                    return {visible:{...prevState.visible,[currentCollap] : newStateVisible}};
                      
                  } 
             }
