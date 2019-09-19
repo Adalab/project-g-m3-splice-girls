@@ -4,7 +4,9 @@ import twitterIcon from '../images/twitter-brands.svg';
 import PropTypes from 'prop-types';
 
 class FormOptShare extends React.Component {
+    
     render() {
+        const twitterText = `Hey there! :) Check out my new AWESOME profile card: ${this.props.cardURL}`;
         let h2Classname = "share__title js__title--form";
         if (this.props.visible.share) {
             h2Classname = "share__title js__title--form share__title2 ";
@@ -31,7 +33,7 @@ class FormOptShare extends React.Component {
                              <p className="created--message">La tarjeta ha sido creada: </p>
                              <a href={this.props.cardURL} className="link__card">{this.props.cardURL}</a>
                              <div className="container__button-twitter">
-                                 <a href="" className="share__button-twitter">
+                                 <a href={`https://twitter.com/intent/tweet?text=+ ${encodeURIComponent(twitterText)}`} className="share__button-twitter">
                                      <img src={twitterIcon} className="twitter__icon" alt="twitter-icon" />Compartir en twitter</a>
                              </div>
                          </div>
