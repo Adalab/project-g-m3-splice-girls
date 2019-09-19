@@ -5,9 +5,9 @@ class FormHeader extends React.Component {
     render() {
         return (
             <header className="header__box">
-                <Link to="/"><div className="header__form">
-                    <h1 className="title__form">awesome profile cards</h1>
-                </div></Link>
+                <div className="header__form">
+                <Link to="/"><h1 className="title__form">awesome profile cards</h1></Link>
+                </div>
             </header>
         );
     }
