@@ -24,7 +24,8 @@ class FormMain extends React.Component {
                         cardTelephone={this.props.cardTelephone}
                         cardLinkedin={this.props.cardLinkedin}
                         cardGithub={this.props.cardGithub} 
-                        handleSendData={this.props.handleSendData}/>
+                        handleSendData={this.props.handleSendData}  
+                        cardURL={this.props.cardURL} />
                     <FormPreview
                         handleClickReset={this.props.handleClickReset}
                         avatar={this.props.avatar}
@@ -35,6 +36,7 @@ class FormMain extends React.Component {
                         cardTelephone={this.props.cardTelephone}
                         cardLinkedin={this.props.cardLinkedin}
                         cardGithub={this.props.cardGithub}
+                      
 
                     />
 
@@ -63,7 +65,9 @@ FormMain.propTypes = {
     cardTelephone: PropTypes.string.isRequired,
     cardLinkedin: PropTypes.string.isRequired,
     cardGithub: PropTypes.string.isRequired,
-    handleSendData: PropTypes.func.isRequired
+    handleSendData: PropTypes.func.isRequired,
+    cardURL:PropTypes.string.isRequired
+    
 }
 
 export default FormMain;

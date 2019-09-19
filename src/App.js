@@ -26,6 +26,7 @@ class App extends React.Component {
                 fill: false,
                 share: false
             },
+            cardURL:'',
 
         };
         this.updateAvatar = this.updateAvatar.bind(this);
@@ -132,7 +133,7 @@ class App extends React.Component {
     handleSendData() {
             createdCard(this.state.userData)       
             .then(data => {
-                console.log(data);
+                this.setState({cardURL : data.cardURL});
             });
     };
 
@@ -159,6 +160,7 @@ class App extends React.Component {
                             cardGithub={this.state.userData.github}
                             handleChangeState={this.handleChangeState}
                             handleSendData={this.handleSendData}
+                            cardURL={this.state.cardURL}
                         />}
                     />
                 </Switch>

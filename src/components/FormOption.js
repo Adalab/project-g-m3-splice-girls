@@ -39,7 +39,8 @@ class FormOption extends React.Component {
                         handleChangeState={this.props.handleChangeState}
                         changeCollap={this.props.changeCollap}
                         visible={this.props.visible}
-                        handleSendData={this.props.handleSendData} />
+                        handleSendData={this.props.handleSendData}
+                        cardURL={this.props.cardURL}  />
 
                 </form>
 
@@ -63,7 +64,8 @@ FormOption.propTypes= {
     cardTelephone: PropTypes.string.isRequired,
     cardLinkedin: PropTypes.string.isRequired,
     cardGithub: PropTypes.string.isRequired, 
-    handleSendData: PropTypes.func.isRequired
+    handleSendData: PropTypes.func.isRequired,
+    cardURL:PropTypes.string.isRequired
   }
 
 export default FormOption;
