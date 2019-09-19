@@ -52,25 +52,28 @@ class App extends React.Component {
         const currentCollap = event.currentTarget.id;
         const prevStateVisible = this.state.visible[currentCollap];
         const newStateVisible = !prevStateVisible;
-        if(newStateVisible === true){
-           const copiaVisible = {
-                design : false,
-                fill : false,
-                share: false
+        this.setState(
+            prevState => {
+                if(newStateVisible === true){
+                    const copiaVisible = {
+                         design : false,
+                         fill : false,
+                         share: false
+                     }
+                     copiaVisible[currentCollap]= newStateVisible; 
+                     return ({visible :{...prevState.visible,
+                         design : copiaVisible.design,
+                         fill : copiaVisible.fill,
+                         share: copiaVisible.share
+                     }})
+                 } else { 
+                     
+                    return {visible:{...prevState.visible,[currentCollap] : newStateVisible}};
+                     
+                 } 
             }
-            copiaVisible[currentCollap]= newStateVisible; 
-            this.setState({
-                visible : {
-                design : copiaVisible.design,
-                fill : copiaVisible.fill,
-                share: copiaVisible.share
-                },
-            })
-        } else { 
-            this.setState ({
-                   visible: {...this.state.visible,[currentCollap] : !this.state.visible[currentCollap]},
-            })
-        }
+        )
+       
     };
 
 
