@@ -26,14 +26,18 @@ class FormOptShare extends React.Component {
                                 <button type="submit" className={classeBoton()} onClick={this.props.handleSendData} disabled={this.props.cardURL}>
                                     <img className="create__button--icon" src={shareIcon} alt="" />crear tarjeta</button>
                             </div>
-                            <div className="card__created--info drop-down">
-                                <p className="created--message">La tarjeta ha sido creada: </p>
-                                <a href={this.props.cardURL} className="link__card">{this.props.cardURL}</a>
-                                <div className="container__button-twitter">
-                                    <a href="" className="share__button-twitter">
-                                        <img src={twitterIcon} className="twitter__icon" alt="twitter-icon" />Compartir en twitter</a>
-                                </div>
-                            </div>
+                            {this.props.cardURL &&
+                             <div className="card__created--info drop-down" >
+                             <p className="created--message">La tarjeta ha sido creada: </p>
+                             <a href={this.props.cardURL} className="link__card">{this.props.cardURL}</a>
+                             <div className="container__button-twitter">
+                                 <a href="" className="share__button-twitter">
+                                     <img src={twitterIcon} className="twitter__icon" alt="twitter-icon" />Compartir en twitter</a>
+                             </div>
+                         </div>
+                          }
+                        
+                           
                         </div>}
 
                 </div>
