@@ -1,68 +1,71 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# **Awesome profile cards**
 
-## Available Scripts
+Se trata de una aplicación web que permite al usuario realizar tarjetas profesionales de manera digital. Es un proyecto de código de JavaScript heredado, que hemos traspasado íntegramente al framework React.
 
-In the project directory, you can run:
+**Guía de inicio rápido**
 
-### `npm start`
+Para trabajar con este repositorio, te recomendamos instalar previamente npm install y asegurarte de contar con las dependencias de node modules.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Para el desarrollo del proyecto hemos utilizado:
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+- HTML
+- SCSS
+- REACT
+- JAVASCRIPT
 
-### `npm test`
+La estructura de carpetas 📂 tiene esta forma:
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+g-m3-splice-girls
 
-### `npm run build`
+├── .gitignore
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+├── package.json
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+├── node\_modules
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+│   ├── react
 
-### `npm run eject`
+│   └── react-dom
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+├── public
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+│   └── index.html
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+└── src
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+    ├── images
 
-## Learn More
+    ├── scss
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    ├── services
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    ├── components
 
-### Code Splitting
+    └── index.js
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+**¿Cómo funciona la web?**
 
-### Analyzing the Bundle Size
+**Con esta web puedes generar tu propia tarjeta personal 👩🏻, con la que podrán comunicarse contigo vía teléfono**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+# 📲
+ **o email**
+# 📩
+ **. Además, contiene enlaces directos a tus perfiles de linkedIn y GitHub para que puedan añadirte fácilmente otros usuarios**
+# 👥
+**.**
 
-### Making a Progressive Web App
+**¿Te contamos los pasos?**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+1️⃣ DISEÑA: Elige los colores que más te gusten de la paleta.🖍
 
-### Advanced Configuration
+2️⃣ RELLENA: Rellena todos los campos con tus datos personales. El teléfono no es obligatorio. 📋
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+3️⃣ Prepara tu mejor foto para subirla. 📸
 
-### Deployment
+4️⃣ COMPARTE: Se generará automáticamente una URL con tu tarjeta, y un link para que puedas compartir tu tarjeta personal en Twitter 🐦
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+5️⃣ Así de fácil!
 
-### `npm run build` fails to minify
+✅ Ayúdanos a mejorar: Siempre dispuestas a escuchar tus sugerencias para mejorar la funcionalidad de esta web y ofrecerte un mejor servicio
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+🙌🏾 Proyecto hecho con cariño por alumnas de la promoción Grace de Adalab. Muchas gracias por haber llegado hasta aquí.
