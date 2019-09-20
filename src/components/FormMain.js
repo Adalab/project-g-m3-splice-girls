@@ -9,7 +9,19 @@ class FormMain extends React.Component {
         return (
             <main className="main__box">
                 <div className="wrapper__box">
+                    <FormPreview
+                        handleClickReset={this.props.handleClickReset}
+                        avatar={this.props.avatar}
+                        cardPalette={this.props.cardPalette}
+                        cardName={this.props.cardName}
+                        cardJob={this.props.cardJob}
+                        cardEmail={this.props.cardEmail}
+                        cardTelephone={this.props.cardTelephone}
+                        cardLinkedin={this.props.cardLinkedin}
+                        cardGithub={this.props.cardGithub}
 
+
+                    />
                     <FormOption
                         avatar={this.props.avatar}
                         isAvatarDefault={this.props.isAvatarDefault}
@@ -23,22 +35,10 @@ class FormMain extends React.Component {
                         cardEmail={this.props.cardEmail}
                         cardTelephone={this.props.cardTelephone}
                         cardLinkedin={this.props.cardLinkedin}
-                        cardGithub={this.props.cardGithub} 
-                        handleSendData={this.props.handleSendData}  
-                        cardURL={this.props.cardURL} />
-                    <FormPreview
-                        handleClickReset={this.props.handleClickReset}
-                        avatar={this.props.avatar}
-                        cardPalette={this.props.cardPalette}
-                        cardName={this.props.cardName}
-                        cardJob={this.props.cardJob}
-                        cardEmail={this.props.cardEmail}
-                        cardTelephone={this.props.cardTelephone}
-                        cardLinkedin={this.props.cardLinkedin}
                         cardGithub={this.props.cardGithub}
-                      
+                        handleSendData={this.props.handleSendData}
+                        cardURL={this.props.cardURL} />
 
-                    />
 
                 </div>
 
@@ -52,9 +52,9 @@ class FormMain extends React.Component {
 
 FormMain.propTypes = {
     handleClickReset: PropTypes.func.isRequired,
-    avatar:PropTypes.string.isRequired,
-    isAvatarDefault:PropTypes.bool.isRequired,
-    updateAvatar: PropTypes.func.isRequired, 
+    avatar: PropTypes.string.isRequired,
+    isAvatarDefault: PropTypes.bool.isRequired,
+    updateAvatar: PropTypes.func.isRequired,
     visible: PropTypes.object.isRequired,
     changeCollap: PropTypes.func.isRequired,
     handleChangeState: PropTypes.func.isRequired,
@@ -66,8 +66,8 @@ FormMain.propTypes = {
     cardLinkedin: PropTypes.string.isRequired,
     cardGithub: PropTypes.string.isRequired,
     handleSendData: PropTypes.func.isRequired,
-    cardURL:PropTypes.string.isRequired
-    
+    cardURL: PropTypes.string.isRequired
+
 }
 
 export default FormMain;
