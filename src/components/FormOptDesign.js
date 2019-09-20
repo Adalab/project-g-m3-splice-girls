@@ -4,11 +4,15 @@ import PropTypes from 'prop-types';
 
 class FormOptDesing extends React.Component {
     render() {
- console.log(this.props.cardPalette)
+        let h2Classname = "design__title js__title--form";
+        if (this.props.visible.design ){
+            h2Classname ="design__title js__title--form design__title2";
+        }
         return (
             <fieldset className="design--card">
                 <legend className="hidden">diseña</legend>
-                <h2 className=" design__title design__title2 js__title--form">{this.props.title}</h2>
+                <h2 className={h2Classname}  id="design"  onClick={this.props.changeCollap}>{this.props.title}</h2>
+                { !this.props.visible.design ||
                 <div className="desing__form--container">
                     <div className="design__form ">
                         <h3 className="colors__title">colores</h3>
@@ -16,7 +20,7 @@ class FormOptDesing extends React.Component {
                             <ul className="design__colors-list">
                                 <li className="palette">
                                     <label htmlFor="p1" className="palette__option">
-                                        <input className="radio__palette radio__palette1" type="radio" name="palette" value="palette1" id="p1"  checked={this.props.cardPalette === "palette1"} onChange={this.props.handleChangeState} />
+                                        <input className="radio__palette radio__palette1" type="radio" name="palette" value="1" id="p1"  checked={this.props.cardPalette === 1} onChange={this.props.handleChangeState} />
                                         <ul className="palette--colors">
                                             <li className="color__box p1--color1" style={{  backgroundColor: '#114e4e' }}>cyprus</li>
                                             <li className="color__box p1--color2" style={{ backgroundColor: '#438792'}}>hippie blue</li>
@@ -26,7 +30,7 @@ class FormOptDesing extends React.Component {
                                 </li>
                                 <li className="palette">
                                     <label htmlFor="p2" className="palette__option">
-                                        <input className="radio__palette radio__palette2" type="radio" name="palette" value="palette2" id="p2" onChange={this.props.handleChangeState} checked={this.props.cardPalette === "palette2"} />
+                                        <input className="radio__palette radio__palette2" type="radio" name="palette" value="2" id="p2" onChange={this.props.handleChangeState} checked={this.props.cardPalette === 2} />
                                         <ul className="palette--colors">
                                             <li className="color__box p2--color1" style={{ backgroundColor: '#420101' }}>seal brown</li>
                                             <li className="color__box" style={{ backgroundColor: '#bd1010' }}>free speech red</li>
@@ -36,7 +40,7 @@ class FormOptDesing extends React.Component {
                                 </li>
                                 <li className="palette">
                                     <label htmlFor="p3" className="palette__option">
-                                        <input className="radio__palette radio__palette3" type="radio" name="palette" value="palette3" id="p3" onChange={this.props.handleChangeState} checked={this.props.cardPalette === "palette3"} />
+                                        <input className="radio__palette radio__palette3" type="radio" name="palette" value="3" id="p3" onChange={this.props.handleChangeState} checked={this.props.cardPalette === 3} />
                                         <ul className="palette--colors">
                                             <li className="color__box p3--color1" style={{ backgroundColor: '#3e5b65'}}>san juan</li>
                                             <li className="color__box p3--color2" style={{ backgroundColor: '#eab052'  }}>casablanca</li>
@@ -46,7 +50,7 @@ class FormOptDesing extends React.Component {
                                 </li>
                                 <li className="palette">
                                     <label htmlFor="p4" className="palette__option">
-                                        <input className="radio__palette radio__palette4" type="radio" name="palette" value="palette4" id="p4" onChange={this.props.handleChangeState} checked={this.props.cardPalette === "palette4"} />
+                                        <input className="radio__palette radio__palette4" type="radio" name="palette" value="4" id="p4" onChange={this.props.handleChangeState} checked={this.props.cardPalette === 4} />
                                         <ul className="palette--colors">
                                             <li className="color__box p4--color1" style={{ backgroundColor: '#600060' }}>purple</li>
                                             <li className="color__box" style={{ backgroundColor: '#aa00aa' }}>medium orchid</li>
@@ -56,7 +60,7 @@ class FormOptDesing extends React.Component {
                                 </li>
                                 <li className="palette">
                                     <label htmlFor="p5" className="palette__option">
-                                        <input className="radio__palette radio__palette5" type="radio" name="palette" value="palette5" id="p5" onChange={this.props.handleChangeState} checked={this.props.cardPalette === "palette5"}/>
+                                        <input className="radio__palette radio__palette5" type="radio" name="palette" value="5" id="p5" onChange={this.props.handleChangeState} checked={this.props.cardPalette === 5}/>
                                         <ul className="palette--colors">
                                             <li className="color__box p5--color1" style={{ backgroundColor: '#005500' }}>super dark green</li>
                                             <li className="color__box" style={{ backgroundColor: '#008000' }}>green</li>
@@ -68,13 +72,18 @@ class FormOptDesing extends React.Component {
                         </div>
                     </div>
                 </div>
+            }
+               
             </fieldset>
         );
     }
 }
 
 FormOptDesing.propTypes = {
-    handleChangeState: PropTypes.func,
-    cardPalette: PropTypes.string
+  
+    visible: PropTypes.object.isRequired,
+    changeCollap: PropTypes.func.isRequired,
+    handleChangeState: PropTypes.func.isRequired,
+    cardPalette: PropTypes.number.isRequired,
 }
 export default FormOptDesing;

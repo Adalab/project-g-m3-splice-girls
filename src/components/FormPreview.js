@@ -1,5 +1,6 @@
 import React from 'react';
-import DefaultUrlImage from './DefaultUrlImage';
+import Profile from './Profile'
+
 import PropTypes from 'prop-types';
 
 class FormPreview extends React.Component {
@@ -7,8 +8,8 @@ class FormPreview extends React.Component {
         return (
             <div className="preview__box">
                 <div className="button-card__box">
-                    <button className="reset__button" type="reset"><img src="assets/images/trash-alt-regular.svg" className="far fa-trash-alt" alt="" /><span className="reset__button-title">Reset</span></button>
-                    <div className={this.props.cardPalette === '' ? 'card__box' :  'card__box ' + this.props.cardPalette}>
+                    <button className="reset__button" type="reset" onClick={this.props.handleClickReset}><img src="assets/images/trash-alt-regular.svg" className="far fa-trash-alt" alt="" /><span className="reset__button-title">Reset</span></button>
+                    <div className={this.props.cardPalette === '' ? 'card__box' :  'card__box ' + `palette${this.props.cardPalette}`}>
                         <div className="name-job__box">
                             <p className="name__card">
                                 {this.props.cardName === ''? 'Nombre Apellido': this.props.cardName}
@@ -17,7 +18,8 @@ class FormPreview extends React.Component {
                                 {this.props.cardJob === ''? 'front-end developer': this.props.cardJob}
                             </p>
                         </div>
-                        <div className="image-card js__profile-image" style={{backgroundImage:`url(${DefaultUrlImage})`}}></div>
+                        {/* <div className="image-card js__profile-image" style={{backgroundImage:`url(${DefaultUrlImage})`}}></div> */}
+                        <Profile avatar={this.props.avatar}/>
                         <ul className="rrss__list">
                             <li className={this.props.cardEmail === '' ? 'li--card item2 supersecret':'li--card item2'}>
                                 <a href={this.props.cardEmail === '' ? '#':'mailto:' + this.props.cardEmail} 
@@ -42,14 +44,15 @@ class FormPreview extends React.Component {
 
 
 FormPreview.propTypes= {
-    handleChangeState: PropTypes.func, 
-    cardPalette: PropTypes.string, 
-    cardName: PropTypes.string,
-    cardJob: PropTypes.string,
-    cardEmail: PropTypes.string,
-    cardTelephone: PropTypes.string,
-    cardLinkedin: PropTypes.string,
-    cardGithub: PropTypes.string,
+    handleClickReset: PropTypes.func.isRequired,
+    avatar:PropTypes.string.isRequired,
+    cardPalette: PropTypes.number.isRequired, 
+    cardName: PropTypes.string.isRequired,
+    cardJob: PropTypes.string.isRequired,
+    cardEmail: PropTypes.string.isRequired,
+    cardTelephone: PropTypes.string.isRequired,
+    cardLinkedin: PropTypes.string.isRequired,
+    cardGithub: PropTypes.string.isRequired,
   }
 
 export default FormPreview;

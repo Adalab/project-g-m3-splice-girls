@@ -1,10 +1,11 @@
 import React from 'react';
-import './scss/main.scss';
+import './scss/index.scss';
 import iconDesign from './images/object-ungroup-regular.svg';
 import iconFill from './images/keyboard-regular.svg';
 import iconShare from './images/share-alt-solid.svg';
 import logoTeselas from './images/logo-teselas-nomargin.png';
 import logoAda from './images/logo-adalab.png';
+import { Link } from 'react-router-dom';
 
 class Landing extends React.Component {
   render() {
@@ -31,13 +32,14 @@ class Landing extends React.Component {
                     <p className="icon__label">rellena</p>
                   </li>
                   <li className="list__icon">
-                    <img className="icon" src={iconShare}  alt="icono-comparte" />
+                    <img className="icon" src={iconShare} alt="icono-comparte" />
                     <p className="icon__label">comparte</p>
                   </li>
                 </ul>
-              </div> <a href="form-cards.html" className="landing__button">
+              </div>
+              <Link to='/cards' className="landing__button">
                 <div className="button__container">Comenzar</div>
-              </a>
+              </Link>
             </div>
           </main>
         </div>
